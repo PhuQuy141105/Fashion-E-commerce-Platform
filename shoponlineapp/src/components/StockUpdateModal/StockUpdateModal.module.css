@@ -1,0 +1,307 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+
+  background: rgba(47, 47, 47, 0.5);
+  backdrop-filter: blur(3px);
+}
+
+.modal {
+  width: 100%;
+  max-width: 26rem;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 1.5rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 24px;
+
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+
+  color: #2f2f2f;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding-bottom: 1rem;
+
+  border-bottom: 1px solid rgba(217, 207, 199, 0.7);
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.headerIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.5rem;
+  height: 2.5rem;
+
+  background: #faf8f5;
+  border: 1px solid #d9cfc7;
+  border-radius: 14px;
+}
+
+.headerIcon svg {
+  width: 1.15rem;
+  height: 1.15rem;
+
+  color: #baa48a;
+}
+
+.title {
+  margin: 0;
+
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.subtitle {
+  margin: 0.1rem 0 0;
+
+  font-size: 0.72rem;
+  color: #6f6a64;
+}
+
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.4rem;
+
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+
+  color: #6f6a64;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background: #efe9e3;
+  color: #2f2f2f;
+}
+
+.closeButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.closeButton svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.productInfo {
+  padding: 0.65rem 0.875rem;
+
+  background: #faf8f5;
+  border: 1px solid rgba(217, 207, 199, 0.8);
+  border-radius: 14px;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.currentBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+
+  padding: 0.65rem 0.75rem;
+
+  background: #efe9e3;
+  border: 1px solid rgba(217, 207, 199, 0.8);
+  border-radius: 12px;
+}
+
+.currentLabel {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6f6a64;
+}
+
+.currentValue {
+  font-size: 15px;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.label {
+  display: block;
+
+  margin-bottom: 0.3rem;
+
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6f6a64;
+}
+
+.input {
+  
+  padding: 0.55rem 0.7rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 12px;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #2f2f2f;
+
+  outline: none;
+
+  transition: border-color 150ms ease;
+}
+
+.input:focus {
+  border-color: #c9b59c;
+}
+
+.errorBanner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.6rem 0.75rem;
+
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  border-radius: 12px;
+
+  font-size: 0.75rem;
+  color: #9f1239;
+}
+
+.errorIcon {
+  width: 0.9rem;
+  height: 0.9rem;
+  flex-shrink: 0;
+}
+
+.helperText {
+  margin: 0;
+
+  font-size: 0.7rem;
+  line-height: 1.5;
+  color: #6f6a64;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.65rem;
+
+  padding-top: 0.75rem;
+
+  border-top: 1px solid rgba(217, 207, 199, 0.7);
+}
+
+.cancelButton {
+  padding: 0.65rem 1.1rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 12px;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #6f6a64;
+
+  cursor: pointer;
+
+  transition: background-color 150ms ease;
+}
+
+.cancelButton:hover:not(:disabled) {
+  background: #efe9e3;
+}
+
+.cancelButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.saveButton {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  padding: 0.65rem 1.25rem;
+
+  background: #c9b59c;
+  border: 1px solid #b8a287;
+  border-radius: 12px;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #2f2f2f;
+
+  cursor: pointer;
+
+  transition: background-color 150ms ease;
+}
+
+.saveButton:hover:not(:disabled) {
+  background: #baa48a;
+}
+
+.saveButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.saveIcon {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+.spinnerIcon {
+  width: 0.9rem;
+  height: 0.9rem;
+
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

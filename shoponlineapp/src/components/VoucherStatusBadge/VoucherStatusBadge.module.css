@@ -1,0 +1,33 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  border-radius: 9999px;
+  border: 1px solid;
+
+  font-weight: 700;
+  letter-spacing: 0.03em;
+
+  white-space: nowrap;
+}
+
+.size_sm {
+  padding: 0.15rem 0.55rem;
+  font-size: 0.62rem;
+}
+
+.size_md {
+  padding: 0.25rem 0.7rem;
+  font-size: 0.68rem;
+}
+
+.icon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.tone_emerald { background: #ecfdf5; color: #065f46; border-color: #a7f3d0; }
+.tone_sky { background: #e0f2fe; color: #075985; border-color: #7dd3fc; }
+.tone_neutral { background: #faf8f5; color: #6f6a64; border-color: #d9cfc7; }
+.tone_rose { background: #fff1f2; color: #9f1239; border-color: #fecdd3; }

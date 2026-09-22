@@ -1,0 +1,121 @@
+.filterChip {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+
+  line-height: 1.4;
+
+  user-select: none;
+
+  cursor: pointer;
+
+  border: 1px solid transparent;
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease;
+
+  font-family: inherit;
+}
+
+.active {
+  background: #2f2f2f;
+  color: #f9f8f6;
+
+  border-color: #2f2f2f;
+
+  box-shadow:
+    0 1px 3px rgba(47, 47, 47, 0.1);
+}
+
+.active:hover {
+  background: #403d3a;
+  border-color: #403d3a;
+}
+
+.removable {
+  background: #efe9e3;
+  color: #2f2f2f;
+
+  border-color: #d9cfc7;
+}
+
+.removable:hover {
+  background: rgba(217, 207, 199, 0.8);
+}
+
+.default {
+  background: #ffffff;
+  color: #2f2f2f;
+
+  border-color: #d9cfc7;
+}
+
+.default:hover {
+  background: rgba(239, 233, 227, 0.5);
+
+  border-color: #c9b59c;
+}
+
+.colorSwatch {
+  width: 10px;
+  height: 10px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  box-sizing: border-box;
+}
+
+.removeButton {
+  padding: 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: currentColor;
+
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.removeButton svg {
+  width: 12px;
+  height: 12px;
+}
+
+.removeButton:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.filterChip:focus-visible {
+  outline: none;
+
+  box-shadow:
+    0 0 0 3px rgba(201, 181, 156, 0.25);
+}
+
+
+.filterChip:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}

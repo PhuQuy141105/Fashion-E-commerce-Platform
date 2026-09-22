@@ -1,0 +1,265 @@
+.cancelledCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  padding: 1.5rem;
+
+  background: #fff1f2;
+  border: 1px solid #ffe4e6;
+  border-radius: 22px;
+
+  color: #9f1239;
+}
+
+.cancelledHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cancelledIcon {
+  width: 1.15rem;
+  height: 1.15rem;
+
+  color: #e11d48;
+}
+
+.cancelledTitle {
+  margin: 0;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.cancelledText {
+  margin: 0;
+
+  font-size: 0.78rem;
+  color: #be123c;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  padding: 1.5rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 24px;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+
+  color: #2f2f2f;
+}
+
+@media (min-width: 640px) {
+  .section {
+    padding: 1.75rem;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 1rem;
+
+  border-bottom: 1px solid rgba(217, 207, 199, 0.8);
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-align: left;
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.25rem;
+  height: 2.25rem;
+
+  background: #efe9e3;
+  border: 1px solid #d9cfc7;
+  border-radius: 9999px;
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+
+  color: #c9b59c;
+}
+
+.title {
+  margin: 0;
+
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.subtitle {
+  margin: 0.1rem 0 0;
+
+  font-size: 0.72rem;
+  color: #6f6a64;
+}
+
+.statusPill {
+  padding: 0.25rem 0.75rem;
+
+  background: #efe9e3;
+  border: 1px solid #d9cfc7;
+  border-radius: 9999px;
+
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #2f2f2f;
+}
+
+.timeline {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+
+  padding-left: 1.75rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.9rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
+
+  width: 2px;
+
+  background: #d9cfc7;
+}
+
+.step {
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.marker {
+  position: absolute;
+  left: -1.75rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1.75rem;
+  height: 1.75rem;
+
+  border-radius: 9999px;
+  border: 2px solid;
+}
+
+.markerCompleted {
+  background: #2f2f2f;
+  border-color: #2f2f2f;
+  color: white;
+}
+
+.markerCurrent {
+  background: #f9f8f6;
+  border-color: #c9b59c;
+  box-shadow: 0 0 0 4px rgba(201, 181, 156, 0.3);
+}
+
+.markerUpcoming {
+  background: white;
+  border-color: #d9cfc7;
+  color: #6f6a64;
+}
+
+.markerIcon {
+  width: 0.85rem;
+  height: 0.85rem;
+  stroke-width: 3;
+}
+
+.markerPulse {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 9999px;
+
+  background: #c9b59c;
+
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.markerNumber {
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.stepContent {
+  flex: 1;
+  min-width: 0;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.stepTop {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+
+  justify-content: space-between;
+}
+
+@media (min-width: 480px) {
+  .stepTop {
+    flex-direction: row;
+    align-items: baseline;
+  }
+}
+
+.stepTitle {
+  margin: 0;
+
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #6f6a64;
+}
+
+.stepTitleCurrent {
+  color: #2f2f2f;
+}
+
+.stepDate {
+  font-size: 0.68rem;
+  color: #6f6a64;
+}
+
+.stepDesc {
+  margin: 0;
+  text-align: left;
+  font-size: 0.75rem;
+  color: #6f6a64;
+}

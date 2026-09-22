@@ -1,0 +1,37 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  border-radius: 9999px;
+  border: 1px solid;
+
+  font-weight: 700;
+  letter-spacing: 0.03em;
+
+  white-space: nowrap;
+  /* width: 100%; */
+    justify-content: center;
+}
+
+.size_sm {
+  padding: 0.15rem 0.55rem;
+  font-size: 0.62rem;
+}
+
+.size_md {
+  padding: 0.25rem 0.7rem;
+  font-size: 0.68rem;
+}
+
+.icon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.tone_amber { background: #fef3c7; color: #92400e; border-color: #fcd34d; }
+.tone_indigo { background: #e0e7ff; color: #3730a3; border-color: #a5b4fc; }
+.tone_sky { background: #e0f2fe; color: #075985; border-color: #7dd3fc; }
+.tone_emerald { background: #dcfce7; color: #166534; border-color: #86efac; }
+.tone_rose { background: #ffe4e6; color: #9f1239; border-color: #fda4af; }
+.tone_neutral { background: #efe9e3; color: #2f2f2f; border-color: #d9cfc7; }

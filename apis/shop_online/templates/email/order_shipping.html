@@ -1,0 +1,160 @@
+{% extends "email/base_email.html" %}
+
+{% block title %}
+Đơn hàng đang được giao - {{ order.code }}
+{% endblock %}
+
+{% block content %}
+
+<h1
+    style="
+        margin:0 0 16px;
+        padding:0;
+        font-size:20px;
+        line-height:28px;
+        font-weight:700;
+        color:#3f3222;
+    "
+>
+    Xin chào {{ display_name }},
+</h1>
+
+<p
+    style="
+        margin:0 0 20px;
+        padding:0;
+        font-size:15px;
+        line-height:24px;
+        color:#4a3b26;
+    "
+>
+    Đơn hàng <strong>{{ order.code }}</strong> của bạn hiện đang
+    <span
+        style="
+            color:#d97706;
+            font-weight:700;
+        "
+    >
+        trên đường giao
+    </span>.
+</p>
+
+<table
+    role="presentation"
+    style="
+        width:100%;
+        margin:0 0 20px;
+        padding:0;
+        background-color:#f7f1e3;
+        border:1px solid #ecdfc0;
+        border-collapse:separate;
+        border-spacing:0;
+        border-radius:6px;
+    "
+>
+    <tr>
+        <td
+            style="
+                padding:16px;
+                font-size:14px;
+                line-height:20px;
+            "
+        >
+
+            <p
+                style="
+                    margin:0 0 6px;
+                    padding:0;
+                    font-size:13px;
+                    line-height:20px;
+                    color:#8a7b5c;
+                "
+            >
+                Mã đơn hàng
+            </p>
+
+            <p
+                style="
+                    margin:0 0 14px;
+                    padding:0;
+                    font-size:16px;
+                    line-height:22px;
+                    font-weight:700;
+                    color:#3f3222;
+                    word-break:break-word;
+                "
+            >
+                {{ order.code }}
+            </p>
+
+            <p
+                style="
+                    margin:0 0 6px;
+                    padding:0;
+                    font-size:13px;
+                    line-height:20px;
+                    color:#8a7b5c;
+                "
+            >
+                Địa chỉ giao hàng
+            </p>
+
+            <p
+                style="
+                    margin:0 0 14px;
+                    padding:0;
+                    font-size:15px;
+                    line-height:22px;
+                    color:#3f3222;
+                    word-break:break-word;
+                "
+            >
+                {{ order.shipping_address }}
+            </p>
+
+            {% if order.shipper %}
+
+            <p
+                style="
+                    margin:0 0 6px;
+                    padding:0;
+                    font-size:13px;
+                    line-height:20px;
+                    color:#8a7b5c;
+                "
+            >
+                Người giao hàng
+            </p>
+
+            <p
+                style="
+                    margin:0;
+                    padding:0;
+                    font-size:15px;
+                    line-height:22px;
+                    color:#3f3222;
+                    word-break:break-word;
+                "
+            >
+                {{ order.shipper.first_name }}{% if order.shipper.phone %} - {{ order.shipper.phone }}{% endif %}
+            </p>
+
+            {% endif %}
+
+        </td>
+    </tr>
+</table>
+
+<p
+    style="
+        margin:0;
+        padding:0;
+        font-size:14px;
+        line-height:22px;
+        color:#8a7b5c;
+    "
+>
+    Vui lòng để ý điện thoại để nhận hàng thuận tiện nhất.
+</p>
+
+{% endblock %}

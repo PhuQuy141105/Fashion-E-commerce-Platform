@@ -1,0 +1,125 @@
+
+.variantSelector {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.optionGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.optionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.optionLabel {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6f6a64;
+}
+
+.optionValue {
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.optionList {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.sizeButton {
+  min-width: 48px;
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 12px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  user-select: none;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease,
+    box-shadow 150ms ease,
+    opacity 150ms ease;
+
+  cursor: pointer;
+}
+
+.colorButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 8px 14px;
+  border-radius: 12px;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease,
+    box-shadow 150ms ease,
+    opacity 150ms ease;
+
+  cursor: pointer;
+}
+
+.normal {
+  background-color: #ffffff;
+  color: #2f2f2f;
+  border: 1px solid #d9cfc7;
+}
+
+.normal:hover {
+  background-color: #efe9e3;
+}
+
+.selected {
+  background-color: #2f2f2f;
+  color: #ffffff;
+  border: 1px solid #2f2f2f;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.outOfStock {
+  opacity: 0.4;
+  background-color: rgba(239, 233, 227, 0.4);
+  color: #6f6a64;
+  border: 1px solid #d9cfc7;
+  text-decoration: line-through;
+
+  cursor: not-allowed;
+}
+
+.sizeButton:disabled,
+.colorButton:disabled {
+  cursor: not-allowed;
+}
+
+.checkIcon {
+  width: 14px;
+  height: 14px;
+}
+
+.outOfStockText {
+  font-size: 10px;
+}
+

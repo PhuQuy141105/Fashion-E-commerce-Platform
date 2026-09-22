@@ -1,0 +1,490 @@
+
+.heroBanner {
+  position: relative;
+  width: 100%;
+  margin-bottom: 32px;
+  padding: 24px;
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    #efe9e3,
+    #faf8f5,
+    #e5dcd3
+  );
+
+  border: 1px solid #d9cfc7;
+  border-radius: 24px;
+
+  box-shadow: 0 2px 5px rgba(40, 30, 20, 0.04);
+}
+
+.heroDecoration {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.heroDecorationRight {
+  width: 384px;
+  height: 384px;
+
+  right: -96px;
+  top: -96px;
+
+  background: rgba(201, 181, 156, 0.15);
+
+  filter: blur(48px);
+}
+
+.heroDecorationLeft {
+  width: 320px;
+  height: 320px;
+
+  left: -80px;
+  bottom: -80px;
+
+  background: rgba(217, 207, 199, 0.25);
+
+  filter: blur(32px);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+
+  gap: 48px;
+  align-items: center;
+}
+
+.heroInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: justify;
+  gap: 20px;
+}
+
+.collectionBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 6px 14px;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  border: 1px solid #d9cfc7;
+  border-radius: 999px;
+
+  color: #2f2f2f;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  box-shadow: 0 2px 5px rgba(40, 30, 20, 0.04);
+
+  backdrop-filter: blur(4px);
+}
+
+.sparkleIcon {
+  width: 14px;
+  height: 14px;
+
+  color: #c9b59c;
+}
+
+.heroTitle {
+  margin: 0;
+  color: #2f2f2f;
+  font-size: 48px;
+  font-weight: 500;
+
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.heroSubtitle {
+  max-width: 576px;
+
+  margin: 0;
+
+  color: #6f6a64;
+
+  font-size: 16px;
+  font-weight: 400;
+
+  line-height: 1.6;
+}
+
+.heroActions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  padding-top: 8px;
+}
+
+.shopButton,
+.exploreButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 14px 24px;
+
+  border-radius: 16px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.shopButton {
+  background: #2f2f2f;
+
+  border: 1px solid #2f2f2f;
+
+  color: #f9f8f6;
+}
+
+.shopButton:hover {
+  background: #1e1e1e;
+}
+
+.shopButton:active {
+  background: #000000;
+  transform: scale(0.98);
+}
+
+.arrowIcon {
+  width: 16px;
+  height: 16px;
+
+  color: #c9b59c;
+
+  transition: transform 0.2s ease;
+}
+
+.shopButton:hover .arrowIcon {
+  transform: translateX(4px);
+}
+
+.exploreButton {
+  background: rgba(255, 255, 255, 0.9);
+
+  border: 1px solid #d9cfc7;
+
+  color: #2f2f2f;
+}
+
+.exploreButton:hover {
+  background: #ffffff;
+  border-color: #c9b59c;
+}
+
+.compassIcon {
+  width: 16px;
+  height: 16px;
+
+  color: #6f6a64;
+}
+
+.heroStats {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+  text-align: center;
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(217, 207, 199, 0.6);
+}
+
+.heroStat p {
+  margin: 0;
+
+  color: #2f2f2f;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.heroStat span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #6f6a64;
+
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.heroVisual {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroImageCard {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    #c9b59c,
+    #efe9e3,
+    #2f2f2f
+  );
+
+  border: 1px solid #d9cfc7;
+  border-radius: 16px;
+
+  box-shadow: 0 10px 25px rgba(40, 30, 20, 0.12);
+}
+
+.visualDecoration {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.visualDecorationTop {
+  width: 192px;
+  height: 192px;
+
+  right: -40px;
+  top: -40px;
+
+  background: rgba(255, 255, 255, 0.2);
+
+  filter: blur(32px);
+}
+
+.visualDecorationBottom {
+  width: 160px;
+  height: 160px;
+
+  left: -32px;
+  bottom: -32px;
+
+  background: rgba(47, 47, 47, 0.25);
+
+  filter: blur(32px);
+}
+
+.heroGem {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroGem svg {
+  width: 64px;
+  height: 64px;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  stroke-width: 1.2;
+}
+
+.heroOverlay {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.3),
+    transparent 60%
+  );
+}
+
+
+.floatingLabel {
+  position: absolute;
+
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  padding: 12px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  border: 1px solid rgba(217, 207, 199, 0.8);
+
+  border-radius: 12px;
+
+  box-shadow: 0 4px 10px rgba(40, 30, 20, 0.08);
+
+  backdrop-filter: blur(12px);
+}
+
+.labelContent {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.labelContent span {
+  color: #6f6a64;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.labelContent strong {
+  margin-top: 2px;
+
+  color: #2f2f2f;
+
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.labelIcon {
+  width: 16px;
+  height: 16px;
+
+  flex-shrink: 0;
+
+  color: #c9b59c;
+}
+
+@media (max-width: 1024px) {
+
+  .heroContent {
+    gap: 32px;
+  }
+
+  .heroTitle {
+    font-size: 40px;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .heroBanner {
+    padding: 32px 24px;
+  }
+
+  .heroContent {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .heroTitle {
+    font-size: 36px;
+  }
+
+  .heroSubtitle {
+    max-width: 100%;
+  }
+
+  .heroVisual {
+    width: 100%;
+  }
+
+  .heroImageCard {
+    aspect-ratio: 16 / 11;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .heroBanner {
+    padding: 24px 18px;
+
+    border-radius: 20px;
+  }
+
+  .heroInfo {
+    gap: 16px;
+  }
+
+  .collectionBadge {
+    font-size: 10px;
+    padding: 6px 10px;
+  }
+
+  .heroTitle {
+    font-size: 30px;
+  }
+
+  .heroSubtitle {
+    font-size: 14px;
+  }
+
+  .heroActions {
+    width: 100%;
+
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .shopButton,
+  .exploreButton {
+    width: 100%;
+  }
+
+  .heroStats {
+    gap: 12px;
+  }
+
+  .heroStat p {
+    font-size: 18px;
+  }
+
+  .heroStat span {
+    font-size: 10px;
+  }
+
+}
+

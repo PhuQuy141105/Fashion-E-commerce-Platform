@@ -1,0 +1,218 @@
+.card {
+  width: 100%;
+  max-width: 30rem;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+
+  padding: 1.5rem;
+  text-align: center;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 28px;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+  color: #2f2f2f;
+}
+
+@media (min-width: 640px) {
+  .card {
+    padding: 2rem;
+  }
+}
+
+.iconBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 4rem;
+  height: 4rem;
+
+  border-radius: 9999px;
+  border: 1px solid;
+}
+
+.iconBadge svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.iconBadgePending {
+  background: #fffbeb;
+  border-color: #fde68a;
+  color: #d97706;
+}
+
+.iconBadgeFailed {
+  background: #fff1f2;
+  border-color: #fecdd3;
+  color: #e11d48;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.statusPill {
+  padding: 0.2rem 0.65rem;
+
+  border-radius: 9999px;
+  border: 1px solid;
+
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.statusPillPending {
+  background: #fef3c7;
+  border-color: #fcd34d;
+  color: #92400e;
+}
+
+.statusPillFailed {
+  background: #ffe4e6;
+  border-color: #fda4af;
+  color: #9f1239;
+}
+
+.title {
+  margin: 0;
+
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+.desc {
+  margin: 0;
+  max-width: 22rem;
+
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: #6f6a64;
+}
+
+.tipsBox {
+  width: 100%;
+
+  padding: 1rem;
+  text-align: left;
+
+  background: #f9f8f6;
+  border: 1px solid #d9cfc7;
+  border-radius: 16px;
+
+  font-size: 0.75rem;
+}
+
+.tipsTitle {
+  display: block;
+
+  margin-bottom: 0.5rem;
+
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.tipsList {
+  margin: 0;
+  padding-left: 1.1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+
+  font-size: 0.7rem;
+  color: #6f6a64;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  width: 100%;
+}
+
+.primaryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  padding: 0.9rem 1.25rem;
+
+  background: #2f2f2f;
+  border: none;
+  border-radius: 14px;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #f9f8f6;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  transition: background-color 150ms ease;
+}
+
+.primaryButton:hover {
+  background: black;
+}
+
+.primaryButtonIcon {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+.secondaryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  padding: 0.75rem 1rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 14px;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #2f2f2f;
+
+  cursor: pointer;
+
+  transition: background-color 150ms ease;
+}
+
+.secondaryButton:hover {
+  background: #efe9e3;
+}
+
+.secondaryButtonIcon {
+  width: 0.85rem;
+  height: 0.85rem;
+
+  color: #6f6a64;
+}

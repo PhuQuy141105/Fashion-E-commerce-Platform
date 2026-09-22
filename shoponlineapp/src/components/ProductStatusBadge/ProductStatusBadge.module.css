@@ -1,0 +1,58 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  padding: 0.25rem 0.65rem;
+
+  border-radius: 9999px;
+  border: 1px solid;
+
+  font-size: 0.68rem;
+  font-weight: 500;
+  white-space: nowrap;
+  width: 100%;
+    
+    justify-content: center;
+}
+
+.dot {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 9999px;
+}
+
+.badgeActive {
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+  color: #065f46;
+}
+.badgeActive .dot { background: #10b981; }
+
+.badgeInStock {
+  background: #f9f8f6;
+  border-color: #d9cfc7;
+  color: #2f2f2f;
+}
+.badgeInStock .dot { background: #2f2f2f; }
+
+.badgeLowStock {
+  background: #fffbeb;
+  border-color: #fde68a;
+  color: #92400e;
+}
+.badgeLowStock .dot { background: #f59e0b; }
+
+.badgeOutOfStock {
+  background: #fff1f2;
+  border-color: #fecdd3;
+  color: #9f1239;
+}
+.badgeOutOfStock .dot { background: #f43f5e; }
+
+.badgeDiscontinued {
+      background: #fff1f2;
+    border-color: #fecdd3;
+    color: #9f1239;
+}
+.badgeDiscontinued .dot { background: #9c9691; }

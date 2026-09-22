@@ -1,0 +1,385 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  height: 4rem;
+  padding: 0 1rem;
+
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #d9cfc7;
+}
+
+@media (min-width: 640px) {
+  .topbar {
+    padding: 0 2rem;
+  }
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.mobileMenuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.5rem;
+
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+
+  color: #6f6a64;
+  cursor: pointer;
+}
+
+.mobileMenuButton:hover {
+  background: #faf8f5;
+  color: #2f2f2f;
+}
+
+.mobileMenuButton svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+@media (min-width: 1024px) {
+  .mobileMenuButton {
+    display: none;
+  }
+}
+
+.pageTitle {
+  margin: 0;
+
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2f2f2f;
+  letter-spacing: -0.01em;
+
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .pageTitle {
+    display: none;
+  }
+}
+
+.searchForm {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  flex: 1;
+  max-width: 24rem;
+  margin: 0 0.5rem;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.75rem;
+
+  width: 0.85rem;
+  height: 0.85rem;
+
+  color: #6f6a64;
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+
+  padding: 0.5rem 0.75rem 0.5rem 2rem;
+
+  background: #faf8f5;
+  border: 1px solid #d9cfc7;
+  border-radius: 12px;
+
+  font-size: 0.75rem;
+  color: #2f2f2f;
+
+  outline: none;
+
+  transition: border-color 150ms ease;
+}
+
+.searchInput:focus {
+  border-color: #c9b59c;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.dropdownWrapper {
+  position: relative;
+}
+
+.iconButton {
+      width: 40px;
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d9cfc7;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #2f2f2f;
+    box-shadow: 0 1px 2px rgba(40, 30, 20, 0.04);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.iconButton:hover {
+  background: #faf8f5;
+  color: #2f2f2f;
+}
+
+.iconButtonIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.badge {
+  position: absolute;
+    top: -6px;
+    right: -6px;
+    min-width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #c9b59c;
+    border: 2px solid #f9f8f6;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #2f2f2f;
+    line-height: 1;
+}
+
+.profileButton {
+  display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px 4px 6px;
+    border: 1px solid #d9cfc7;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 1px 2px rgba(40, 30, 20, 0.04);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.profileButton:hover {
+  background: #efe9e3;
+    border-color: #c9b59c;
+}
+
+.avatar {
+          display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: white;
+    border-radius: 10px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #c9b59c;
+    border: 1px solid #c9b59c;
+    color: #2f2f2f;
+}
+
+.profileInfo {
+  display: none;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .profileInfo {
+    display: block;
+  }
+}
+
+.profileName {
+  margin: 0;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #2f2f2f;
+  line-height: 1.2;
+}
+
+.profileRole {
+  font-size: 0.62rem;
+  font-weight: 600;
+  color: #047857;
+}
+
+.chevron {
+  display: none;
+
+  width: 0.85rem;
+  height: 0.85rem;
+  color: #6f6a64;
+}
+
+@media (min-width: 640px) {
+  .chevron {
+    display: block;
+  }
+}
+
+.profileDropdown {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 0.6rem;
+
+  width: 15rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 18px;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+  overflow: hidden;
+
+  z-index: 50;
+}
+
+.profileDropdownHeader {
+  padding: 0.875rem 1rem;
+
+  border-bottom: 1px solid rgba(217, 207, 199, 0.7);
+}
+
+.profileDropdownName {
+  margin: 0;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #2f2f2f;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.profileDropdownEmail {
+  margin: 0.1rem 0 0;
+
+  font-size: 0.68rem;
+  color: #6f6a64;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.accessBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+
+  margin-top: 0.4rem;
+
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #065f46;
+}
+
+.accessBadgeIcon {
+  width: 0.7rem;
+  height: 0.7rem;
+}
+
+.profileDropdownBody {
+  padding: 0.35rem;
+}
+
+.profileDropdownButton {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #2f2f2f;
+
+  cursor: pointer;
+
+  transition: background-color 150ms ease;
+}
+
+.profileDropdownButton:hover {
+  background: #faf8f5;
+}
+
+.profileDropdownIconAccent {
+  width: 0.9rem;
+  height: 0.9rem;
+  color: #c9b59c;
+}
+
+.profileDropdownFooter {
+  padding: 0.35rem;
+
+  border-top: 1px solid rgba(217, 207, 199, 0.7);
+}
+
+.logoutDropdownButton {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #be123c;
+
+  cursor: pointer;
+
+  transition: background-color 150ms ease;
+}
+
+.logoutDropdownButton:hover {
+  background: #fff1f2;
+}
+
+.profileDropdownIcon {
+  width: 0.9rem;
+  height: 0.9rem;
+}

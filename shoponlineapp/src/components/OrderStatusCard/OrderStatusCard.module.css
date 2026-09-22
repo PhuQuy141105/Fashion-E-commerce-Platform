@@ -1,0 +1,128 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-width: 150px;
+  flex: 1;
+
+  padding: 1rem;
+  text-align: left;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 20px;
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+
+  cursor: pointer;
+
+  transition: border-color 150ms ease, background-color 150ms ease, box-shadow 150ms ease;
+}
+
+.card:hover {
+  background: #faf8f5;
+  border-color: rgba(201, 181, 156, 0.6);
+}
+
+.cardActive {
+  background: #faf8f5;
+  border-color: #c9b59c;
+  box-shadow: 0 0 0 1px rgba(201, 181, 156, 0.4);
+}
+
+.cardActive:hover {
+  background: #faf8f5;
+  border-color: #c9b59c;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+
+  margin-bottom: 0.75rem;
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.25rem;
+  height: 2.25rem;
+
+  border-radius: 12px;
+  border: 1px solid rgba(217, 207, 199, 0.6);
+
+  transition: transform 150ms ease;
+}
+
+.card:hover .iconBox {
+  transform: scale(1.05);
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.tone_amber { background: #fffbeb; color: #b45309; }
+.tone_indigo { background: #eef2ff; color: #4338ca; }
+.tone_sky { background: #f0f9ff; color: #0369a1; }
+.tone_emerald { background: #f0fdf4; color: #047857; }
+.tone_rose { background: #fff1f2; color: #be123c; }
+
+.countBadge {
+  padding: 0.1rem 0.5rem;
+
+  background: #efe9e3;
+  border-radius: 9999px;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #2f2f2f;
+
+  transition: background-color 150ms ease;
+}
+
+.countBadgeActive {
+  background: #2f2f2f;
+  color: #f9f8f6;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  margin: 0;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.dot {
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 9999px;
+}
+
+.dot_amber { background: #f59e0b; }
+.dot_indigo { background: #6366f1; }
+.dot_sky { background: #0ea5e9; }
+.dot_emerald { background: #10b981; }
+.dot_rose { background: #f43f5e; }
+
+.desc {
+  margin: 10px 0 0;
+
+  font-size: 0.68rem;
+  color: #6f6a64;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

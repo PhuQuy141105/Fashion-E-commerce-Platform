@@ -1,0 +1,359 @@
+.stateCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+
+  padding: 3rem;
+  text-align: center;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 20px;
+
+  color: #6f6a64;
+  font-size: 0.8rem;
+}
+
+.loadingIcon {
+  width: 2rem;
+  height: 2rem;
+  color: #c9b59c;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.emptyIconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 3.5rem;
+  height: 3.5rem;
+
+  background: #faf8f5;
+  border: 1px solid #d9cfc7;
+  border-radius: 18px;
+}
+
+.emptyIcon {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: #c9b59c;
+}
+
+.emptyTitle {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.emptyText {
+  margin: 0;
+  font-size: 0.78rem;
+}
+
+.emptyActions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.resetButton {
+  padding: 0.55rem 1.1rem;
+
+  background: #faf8f5;
+  border: 1px solid #d9cfc7;
+  border-radius: 12px;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #2f2f2f;
+
+  cursor: pointer;
+}
+
+.resetButton:hover {
+  background: #efe9e3;
+}
+
+.createButton {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  padding: 0.55rem 1.1rem;
+
+  background: #2f2f2f;
+  border: none;
+  border-radius: 12px;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: white;
+
+  cursor: pointer;
+}
+
+.createButton:hover {
+  background: black;
+}
+
+.createIcon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.tableCard {
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 20px;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+
+  overflow: hidden;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.headRow {
+  background: #faf8f5;
+  border-bottom: 1px solid #d9cfc7;
+}
+
+.headRow .th:not(:first-child) {
+    text-align: center;
+}
+
+.th {
+  padding: 0.75rem 1rem;
+
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6f6a64;
+
+  white-space: nowrap;
+}
+
+.thCenter {
+  text-align: center;
+}
+
+.thRight {
+  text-align: right;
+}
+
+.row {
+  border-bottom: 1px solid rgba(217, 207, 199, 0.5);
+  transition: background-color 150ms ease;
+  font-size: 13px
+}
+
+.row .cell:not(:first-child) {
+    text-align: center
+}
+
+.row:hover {
+  background: #faf8f5;
+}
+
+.cell {
+  padding: 0.8rem 1rem;
+  vertical-align: middle;
+}
+
+.cellCenter {
+  text-align: center;
+}
+
+.cellRight {
+  text-align: right;
+}
+
+.code {
+  display: block;
+  font-weight: 500;
+  color: #2f2f2f;
+}
+
+.description {
+  display: block;
+  max-width: 14rem;
+
+  font-size: 0.68rem;
+  color: #6f6a64;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+
+.discountIcon {
+  width: 0.8rem;
+  height: 0.8rem;
+  color: #c9b59c;
+}
+
+.discountValue {
+  font-weight: 500;
+  color: #2f2f2f;
+}
+
+.maxDiscount {
+  display: block;
+
+  margin-top: 0.15rem;
+
+  font-size: 10px;
+  color: #6f6a64;
+}
+
+.minOrder {
+  font-size: 0.72rem;
+  color: #6f6a64;
+  white-space: nowrap;
+}
+
+.usageTag {
+  padding: 0.15rem 0.6rem;
+
+  background: #faf8f5;
+  border: 1px solid #d9cfc7;
+  border-radius: 9999px;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.dateText {
+  font-size: 0.72rem;
+  color: #2f2f2f;
+  white-space: nowrap;
+}
+
+.dateArrow {
+  margin: 0 0.25rem;
+  color: #6f6a64;
+}
+
+.actionsRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.35rem;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.5rem;
+
+  background: #faf8f5;
+  border: 1px solid #d9cfc7;
+  border-radius: 12px;
+
+  color: #6f6a64;
+  cursor: pointer;
+
+  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+}
+
+.actionButton:hover {
+  background: #efe9e3;
+  color: #2f2f2f;
+}
+
+.actionButtonRose:hover {
+  background: #fff1f2;
+  border-color: #fecdd3;
+  color: #9f1239;
+}
+
+.actionIcon {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0.875rem 1.25rem;
+
+  background: rgba(250, 248, 245, 0.6);
+  border-top: 1px solid rgba(217, 207, 199, 0.8);
+}
+
+@media (min-width: 480px) {
+  .pagination {
+    flex-direction: row;
+  }
+}
+
+.paginationInfo {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #6f6a64;
+}
+
+.paginationControls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pageButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2rem;
+  height: 2rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 10px;
+
+  color: #2f2f2f;
+  cursor: pointer;
+
+  transition: background-color 150ms ease;
+}
+
+.pageButton:hover:not(:disabled) {
+  background: #efe9e3;
+}
+
+.pageButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pageIcon {
+  width: 0.9rem;
+  height: 0.9rem;
+}

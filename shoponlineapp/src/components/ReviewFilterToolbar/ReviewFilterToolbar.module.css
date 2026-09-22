@@ -1,0 +1,141 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+
+  padding: 1rem 1.25rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 20px;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+@media (min-width: 768px) {
+  .row {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.searchWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.75rem;
+
+  width: 0.85rem;
+  height: 0.85rem;
+  color: #6f6a64;
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+
+  padding: 0.6rem 0.75rem 0.6rem 2rem;
+
+  background: #faf8f5;
+  border: 1px solid #d9cfc7;
+  border-radius: 12px;
+
+  font-size: 0.78rem;
+  color: #2f2f2f;
+
+  outline: none;
+  transition: border-color 150ms ease;
+}
+
+.searchInput:focus {
+  border-color: #c9b59c;
+}
+
+.select {
+  padding: 0.6rem 0.85rem;
+
+  background: #faf8f5;
+  border: 1px solid #d9cfc7;
+  border-radius: 12px;
+
+  font-size: 0.78rem;
+  color: #2f2f2f;
+
+  outline: none;
+  cursor: pointer;
+
+  transition: border-color 150ms ease;
+}
+
+.select:focus {
+  border-color: #c9b59c;
+}
+
+.sortWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.sortIcon {
+  position: absolute;
+  left: 0.75rem;
+
+  width: 0.8rem;
+  height: 0.8rem;
+  color: #6f6a64;
+  pointer-events: none;
+}
+
+.selectWithIcon {
+  padding-left: 2rem;
+}
+
+.resetButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.6rem;
+
+  background: #faf8f5;
+  border: 1px solid #d9cfc7;
+  border-radius: 12px;
+
+  color: #6f6a64;
+  cursor: pointer;
+
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.resetButton:hover {
+  background: #efe9e3;
+  color: #2f2f2f;
+}
+
+.resetIcon {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+.resultText {
+  margin: 0;
+
+  font-size: 0.72rem;
+  color: #6f6a64;
+}
+
+.resultText strong {
+  color: #2f2f2f;
+}

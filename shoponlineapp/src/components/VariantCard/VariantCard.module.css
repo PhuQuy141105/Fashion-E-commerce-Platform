@@ -1,0 +1,240 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+
+  padding: 1.1rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 18px;
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+
+  transition: box-shadow 150ms ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.cardOutOfStock {
+  background: #faf9f8;
+  border-color: #d9cfc7;
+}
+
+.cardLowStock {
+  background: #fffdf7;
+  border-color: #fde68a;
+}
+
+.topRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+
+  margin-bottom: 0.75rem;
+}
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.colorName {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.sizeTag {
+  padding: 0.1rem 0.5rem;
+
+  background: #efe9e3;
+  border: 1px solid #d9cfc7;
+  border-radius: 8px;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  flex-shrink: 0;
+
+  padding: 0.2rem 0.6rem;
+
+  border-radius: 9999px;
+  border: 1px solid;
+
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+.dot {
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 9999px;
+}
+
+.badgeIcon {
+  width: 0.65rem;
+  height: 0.65rem;
+}
+
+.badgeInStock {
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+  color: #065f46;
+}
+.badgeInStock .dot { background: #10b981; }
+
+.badgeLowStock {
+  background: #fffbeb;
+  border-color: #fde68a;
+  color: #92400e;
+}
+
+.badgeOutOfStock {
+  background: #f5f4f2;
+  border-color: #d9cfc7;
+  color: #6f6a64;
+}
+.badgeOutOfStock .dot { background: #9c9691; }
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+
+  padding-top: 0.75rem;
+
+  border-top: 1px solid rgba(217, 207, 199, 0.6);
+}
+
+.statBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+
+  padding: 0.6rem;
+
+  background: #faf8f5;
+  border: 1px solid rgba(217, 207, 199, 0.6);
+  border-radius: 12px;
+}
+
+.statLabel {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6f6a64;
+}
+
+.statValue {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.statValueMuted {
+  color: #9c9691;
+  text-decoration: line-through;
+}
+
+.statValueWarning {
+  color: #92400e;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.adjustmentTag {
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #b45309;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding-top: 0.75rem;
+
+  border-top: 1px solid rgba(217, 207, 199, 0.6);
+}
+
+.stockButton {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+
+  padding: 0.55rem 0.75rem;
+
+  background: #faf8f5;
+  border: 1px solid #d9cfc7;
+  border-radius: 12px;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #2f2f2f;
+
+  cursor: pointer;
+
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.stockButton:hover {
+  background: #efe9e3;
+  border-color: #c9b59c;
+}
+
+.stockButtonIcon {
+  width: 0.75rem;
+  height: 0.75rem;
+
+  color: #6f6a64;
+}
+
+.editButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.55rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 12px;
+
+  color: #6f6a64;
+  cursor: pointer;
+
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.editButton:hover {
+  background: #efe9e3;
+  color: #2f2f2f;
+}
+
+.editButtonIcon {
+  width: 0.9rem;
+  height: 0.9rem;
+}

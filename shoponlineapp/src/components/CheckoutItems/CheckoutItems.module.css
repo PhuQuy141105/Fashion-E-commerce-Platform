@@ -1,0 +1,225 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  padding: 1.5rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 24px;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+@media (min-width: 640px) {
+  .section {
+    padding: 1.75rem;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  padding-bottom: 1rem;
+
+  border-bottom: 1px solid rgba(217, 207, 199, 0.8);
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.stepBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 2rem;
+  height: 2rem;
+
+  background: #efe9e3;
+  border: 1px solid #d9cfc7;
+  border-radius: 9999px;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 6px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.subtitle {
+  margin: 0.1rem 0 0;
+
+  font-size: 0.72rem;
+  color: #6f6a64;
+}
+
+.countBadge {
+  flex-shrink: 0;
+
+  padding: 0.3rem 0.75rem;
+
+  background: #f9f8f6;
+  border: 1px solid #d9cfc7;
+  border-radius: 9999px;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  padding: 1rem 0;
+
+  border-bottom: 1px solid rgba(217, 207, 199, 0.5);
+}
+
+.row:first-child {
+  padding-top: 0;
+}
+
+.row:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  min-width: 0;
+}
+
+.imageWrapper {
+  position: relative;
+
+  width: 4rem;
+  height: 4rem;
+  flex-shrink: 0;
+
+  border-radius: 14px;
+  overflow: hidden;
+
+  background: #efe9e3;
+  border: 1px solid #d9cfc7;
+}
+
+@media (min-width: 640px) {
+  .imageWrapper {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.qtyBadge {
+  position: absolute;
+  bottom: 0.2rem;
+  right: 0.2rem;
+
+  padding: 0.1rem 0.35rem;
+
+  background: rgba(47, 47, 47, 0.85);
+  border-radius: 6px;
+
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: white;
+}
+
+.info {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.brand {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #c9b59c;
+  text-align: left
+}
+
+.name {
+  margin: 0;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #2f2f2f;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.attrs {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.attrTag {
+  padding: 0.1rem 0.4rem;
+
+  background: #f9f8f6;
+  border: 1px solid rgba(217, 207, 199, 0.8);
+  border-radius: 6px;
+
+  font-size: 0.65rem;
+  color: #6f6a64;
+}
+
+.attrTag strong {
+  color: #2f2f2f;
+}
+
+.right {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.subtotal {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.unitPrice {
+  margin-top: 0.1rem;
+
+  font-size: 0.65rem;
+  color: #6f6a64;
+}

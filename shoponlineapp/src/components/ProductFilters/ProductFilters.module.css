@@ -1,0 +1,183 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 1.25rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 20px;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.875rem;
+  text-align:justify;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+.label {
+  display: block;
+
+  margin-bottom: 0.35rem;
+
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6f6a64;
+}
+
+.searchWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.75rem;
+
+  width: 0.85rem;
+  height: 0.85rem;
+
+  color: #6f6a64;
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+
+  padding: 0.55rem 2rem 0.55rem 2rem;
+
+  background: #faf8f5;
+  border: 1px solid #d9cfc7;
+  border-radius: 12px;
+
+  font-size: 0.78rem;
+  color: #2f2f2f;
+
+  outline: none;
+
+  transition: border-color 150ms ease;
+}
+
+.searchInput:focus {
+  border-color: #c9b59c;
+}
+
+.clearButton {
+  position: absolute;
+  right: 0.6rem;
+
+  display: flex;
+  background: none;
+  border: none;
+
+  color: #6f6a64;
+  cursor: pointer;
+}
+
+.clearButton:hover {
+  color: #2f2f2f;
+}
+
+.clearIcon {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.select {
+  width: 100%;
+
+  padding: 0.55rem 0.75rem;
+
+  background: #faf8f5;
+  border: 1px solid #d9cfc7;
+  border-radius: 12px;
+
+  font-size: 0.78rem;
+  color: #2f2f2f;
+
+  outline: none;
+  cursor: pointer;
+
+  transition: border-color 150ms ease;
+}
+
+.select:focus {
+  border-color: #c9b59c;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+
+  padding-top: 0.75rem;
+
+  border-top: 1px solid rgba(217, 207, 199, 0.6);
+}
+
+.footerLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  font-size: 0.75rem;
+  color: #6f6a64;
+}
+
+.footerIcon {
+  width: 0.8rem;
+  height: 0.8rem;
+
+  color: #c9b59c;
+}
+
+.resetButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  padding: 0.4rem 0.75rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 10px;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #6f6a64;
+
+  cursor: pointer;
+
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.resetButton:hover {
+  background: #efe9e3;
+  color: #2f2f2f;
+}
+
+.resetIcon {
+  width: 0.75rem;
+  height: 0.75rem;
+}

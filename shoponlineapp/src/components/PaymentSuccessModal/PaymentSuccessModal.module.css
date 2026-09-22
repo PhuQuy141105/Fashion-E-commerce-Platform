@@ -1,0 +1,253 @@
+.card {
+  width: 100%;
+  max-width: 30rem;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  padding: 1.5rem;
+  text-align: center;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 28px;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+  color: #2f2f2f;
+}
+
+@media (min-width: 640px) {
+  .card {
+    padding: 2rem;
+  }
+}
+
+.iconBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto;
+
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 9999px;
+
+  color: #059669;
+}
+
+.iconBadge svg {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.verifiedBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+
+  padding: 0.2rem 0.65rem;
+
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  border-radius: 9999px;
+
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #166534;
+}
+
+.verifiedIcon {
+  width: 0.65rem;
+  height: 0.65rem;
+}
+
+.title {
+  margin: 0;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2f2f2f;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 1.75rem;
+  }
+}
+
+.desc {
+  margin: 0;
+  max-width: 26rem;
+
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: #6f6a64;
+}
+
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  padding: 1.25rem;
+  text-align: left;
+
+  background: #f9f8f6;
+  border: 1px solid #d9cfc7;
+  border-radius: 16px;
+
+  font-size: 0.78rem;
+}
+
+.infoRow,
+.infoRowLast {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 0.6rem;
+
+  border-bottom: 1px solid rgba(217, 207, 199, 0.6);
+}
+
+.infoRowLast {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.infoLabel {
+  color: #6f6a64;
+}
+
+.infoValueMono {
+  font-family: monospace;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.infoValuePill {
+  padding: 0.15rem 0.5rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 8px;
+
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.statusPaid {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+
+  padding: 0.15rem 0.5rem;
+
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  border-radius: 9999px;
+
+  font-weight: 700;
+  font-size: 0.7rem;
+  color: #166534;
+}
+
+.statusIcon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.infoValueBig {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.primaryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  padding: 0.9rem 1.25rem;
+
+  background: #2f2f2f;
+  border: none;
+  border-radius: 14px;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #f9f8f6;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  transition: background-color 150ms ease;
+}
+
+.primaryButton:hover {
+  background: black;
+}
+
+.primaryButtonIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.secondaryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  padding: 0.75rem 1rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 14px;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #2f2f2f;
+
+  cursor: pointer;
+
+  transition: background-color 150ms ease;
+}
+
+.secondaryButton:hover {
+  background: #efe9e3;
+}
+
+.secondaryButtonIcon {
+  width: 1rem;
+  height: 1rem;
+
+  color: #6f6a64;
+}

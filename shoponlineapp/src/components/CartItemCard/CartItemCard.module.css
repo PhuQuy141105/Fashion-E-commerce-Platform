@@ -1,0 +1,346 @@
+.card {
+  padding: 1rem;
+
+  background: white;
+  border: 1px solid rgba(217, 207, 199, 0.7);
+  border-radius: 22px;
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+
+  transition: border-color 150ms ease;
+}
+
+@media (min-width: 640px) {
+  .card {
+    padding: 1.25rem;
+  }
+}
+
+.cardOutOfStock {
+  opacity: 0.85;
+}
+
+.cardSelected {
+  border-color: #c9b59c;
+  background: #faf8f5;
+  position: relative;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 1.4rem;
+  height: 1.4rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 8px;
+
+  color: transparent;
+  cursor: pointer;
+
+  transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+.checkbox:hover:not(:disabled) {
+  border-color: #c9b59c;
+}
+
+.checkbox:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.checkboxChecked {
+  background: #c9b59c;
+  border-color: #c9b59c;
+  color: white;
+}
+
+.checkboxIcon {
+  width: 0.85rem;
+  height: 0.85rem;
+  stroke-width: 3;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 20px
+}
+
+@media (min-width: 640px) {
+  .row {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.imageWrapper {
+
+  width: 6rem;
+  height: 6rem;
+  flex-shrink: 0;
+
+  border-radius: 16px;
+  overflow: hidden;
+
+  background: #efe9e3;
+  border: 1px solid #d9cfc7;
+}
+
+.stockBadge {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+
+  padding: 0.15rem 0.45rem;
+
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 9999px;
+
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #15803d;
+
+  line-height: 1.3;
+}
+
+@media (min-width: 640px) {
+  .imageWrapper {
+    width: 7rem;
+    height: 7rem;
+  }
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.outOfStockOverlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.outOfStockOverlay span {
+  padding: 0.2rem 0.5rem;
+
+  background: #2f2f2f;
+  border-radius: 6px;
+
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: white;
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.brand {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6f6a64;
+}
+
+.name {
+  margin: 0;
+
+
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #2f2f2f;
+
+  cursor: pointer;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  transition: color 150ms ease;
+}
+
+.name:hover {
+  color: #c9b59c;
+}
+
+.variantTags {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.variantTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+
+  padding: 0.25rem 0.6rem;
+
+  background: rgba(239, 233, 227, 0.6);
+  border: 1px solid rgba(217, 207, 199, 0.8);
+  border-radius: 10px;
+
+  font-size: 0.7rem;
+  color: #2f2f2f;
+}
+
+.variantLabel {
+  color: #6f6a64;
+}
+
+.variantValue {
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(217, 207, 199, 0.5);
+}
+
+@media (min-width: 640px) {
+  .actions {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+
+    padding-top: 0;
+    border-top: none;
+  }
+}
+
+.priceBlock {
+  text-align: left;
+}
+
+@media (min-width: 640px) {
+  .priceBlock {
+    text-align: right;
+  }
+}
+
+.subtotal {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.unitPrice {
+  font-size: 0.68rem;
+  color: #6f6a64;
+}
+
+.controlsRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+
+  padding: 0.15rem;
+
+  background: #f9f8f6;
+  border: 1px solid #d9cfc7;
+  border-radius: 12px;
+}
+
+.stepperButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1.75rem;
+  height: 1.75rem;
+
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+
+  color: #2f2f2f;
+  cursor: pointer;
+
+  transition: background-color 150ms ease;
+}
+
+.stepperButton:hover:not(:disabled) {
+  background: #efe9e3;
+}
+
+.stepperButton:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.stepperIcon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.quantity {
+  width: 2rem;
+  text-align: center;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.removeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.5rem;
+
+  background: white;
+  border: 1px solid rgba(217, 207, 199, 0.8);
+  border-radius: 12px;
+
+  color: #6f6a64;
+  cursor: pointer;
+
+  transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease;
+}
+
+.removeButton:hover {
+  color: #e11d48;
+  background: #fff1f2;
+  border-color: #fecdd3;
+}
+
+.removeIcon {
+  width: 1rem;
+  height: 1rem;
+}

@@ -1,0 +1,206 @@
+.card {
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 20px;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+
+  overflow: hidden;
+}
+
+.loadingState,
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+
+  min-height: 18rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.loadingIcon {
+  width: 2rem;
+  height: 2rem;
+
+  color: #c9b59c;
+
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loadingText {
+  margin: 0;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #6f6a64;
+}
+
+.emptyIconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 4rem;
+  height: 4rem;
+
+  background: #faf8f5;
+  border: 1px solid #d9cfc7;
+  border-radius: 20px;
+}
+
+.emptyIcon {
+  width: 2rem;
+  height: 2rem;
+
+  color: #baa48a;
+}
+
+.emptyTitle {
+  margin: 0;
+
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.emptyText {
+  margin: 0;
+  max-width: 24rem;
+
+  font-size: 0.78rem;
+  color: #6f6a64;
+}
+
+.emptyButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  margin-top: 0.5rem;
+  padding: 0.65rem 1.25rem;
+
+  background: #c9b59c;
+  border: 1px solid #b8a287;
+  border-radius: 12px;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #2f2f2f;
+
+  cursor: pointer;
+
+  transition: background-color 150ms ease;
+}
+
+.emptyButton:hover {
+  background: #baa48a;
+}
+
+.emptyButtonIcon {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.headRow {
+  background: #faf8f5;
+  border-bottom: 1px solid #d9cfc7;
+  text-align: center;
+}
+
+.th {
+  padding: 0.75rem 1rem;
+
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6f6a64;
+
+  white-space: nowrap;
+}
+
+.thRight {
+  text-align: right;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0.875rem 1.25rem;
+
+  background: rgba(250, 248, 245, 0.6);
+  border-top: 1px solid rgba(217, 207, 199, 0.8);
+}
+
+@media (min-width: 480px) {
+  .pagination {
+    flex-direction: row;
+  }
+}
+
+.paginationInfo {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #6f6a64;
+}
+
+.paginationControls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pageButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2rem;
+  height: 2rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 10px;
+
+  color: #2f2f2f;
+  cursor: pointer;
+
+  transition: background-color 150ms ease;
+}
+
+.pageButton:hover:not(:disabled) {
+  background: #efe9e3;
+}
+
+.pageButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pageIcon {
+  width: 0.9rem;
+  height: 0.9rem;
+}

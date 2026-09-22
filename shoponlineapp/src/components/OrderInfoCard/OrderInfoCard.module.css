@@ -1,0 +1,209 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  padding: 1.5rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 26px;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+
+  color: #2f2f2f;
+}
+
+@media (min-width: 640px) {
+  .card {
+    padding: 1.75rem;
+  }
+}
+
+.topRow {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  justify-content: space-between;
+
+  padding-bottom: 1.25rem;
+
+  border-bottom: 1px solid rgba(217, 207, 199, 0.8);
+}
+
+@media (min-width: 640px) {
+  .topRow {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.codeRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.codeLabel {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6f6a64;
+}
+
+.codeBox {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  padding: 0.25rem 0.6rem;
+
+  background: #f9f8f6;
+  border: 1px solid #d9cfc7;
+  border-radius: 10px;
+}
+
+.codeValue {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.copyButton {
+  display: flex;
+  background: none;
+  border: none;
+
+  color: #6f6a64;
+  cursor: pointer;
+
+  transition: color 150ms ease;
+}
+
+.copyButton:hover {
+  color: #2f2f2f;
+}
+
+.copyIcon,
+.copyIconSuccess {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+.copyIconSuccess {
+  color: #059669;
+}
+
+.dateRow {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  margin-top: 0.5rem;
+
+  font-size: 0.75rem;
+  color: #6f6a64;
+}
+
+.dateIcon {
+  width: 0.85rem;
+  height: 0.85rem;
+
+  color: #c9b59c;
+}
+
+.badgeGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  padding: 0.3rem 0.75rem;
+
+  border-radius: 9999px;
+  border: 1px solid;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.statusBadgeIcon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.tone_amber { background: #fef3c7; color: #92400e; border-color: #fcd34d; }
+.tone_indigo { background: #e0e7ff; color: #3730a3; border-color: #a5b4fc; }
+.tone_sky { background: #e0f2fe; color: #075985; border-color: #7dd3fc; }
+.tone_emerald { background: #dcfce7; color: #166534; border-color: #86efac; }
+.tone_rose { background: #ffe4e6; color: #9f1239; border-color: #fda4af; }
+.tone_default { background: #efe9e3; color: #2f2f2f; border-color: #d9cfc7; }
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 480px) {
+  .metaGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.metaCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  text-align: left;
+  padding: 1rem;
+
+  background: #f9f8f6;
+  border: 1px solid rgba(217, 207, 199, 0.8);
+  border-radius: 16px;
+
+  font-size: 0.78rem;
+}
+
+.metaLabel {
+  color: #6f6a64;
+  font-weight: 500;
+}
+
+.metaValue {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.metaValueEmerald {
+  color: #047857;
+}
+
+.metaIcon {
+  width: 1rem;
+  height: 1rem;
+
+  color: #c9b59c;
+}
+
+.metaIconEmerald {
+  width: 1rem;
+  height: 1rem;
+
+  color: #059669;
+}

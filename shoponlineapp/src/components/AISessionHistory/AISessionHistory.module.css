@@ -1,0 +1,188 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  width: 16rem;
+  flex-shrink: 0;
+  height: 100%;
+
+  padding: 0.875rem;
+
+  background: #faf8f5;
+  border-right: 1px solid #d9cfc7;
+}
+
+@media (min-width: 640px) {
+  .wrapper {
+    width: 18rem;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 0.5rem;
+
+  border-bottom: 1px solid rgba(217, 207, 199, 0.8);
+}
+
+.headerTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.headerIcon {
+  width: 0.85rem;
+  height: 0.85rem;
+
+  color: #c9b59c;
+}
+
+.newButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  padding: 0.3rem 0.6rem;
+
+  background: #2f2f2f;
+  border: none;
+  border-radius: 10px;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: white;
+
+  cursor: pointer;
+
+  transition: background-color 150ms ease;
+}
+
+.newButton:hover {
+  background: black;
+}
+
+.newButtonIcon {
+  width: 0.7rem;
+  height: 0.7rem;
+
+  color: #c9b59c;
+}
+
+.list {
+  flex: 1;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+
+  padding-right: 0.15rem;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+
+  padding: 1.5rem 0.5rem;
+  text-align: center;
+
+  font-size: 0.7rem;
+  color: #6f6a64;
+}
+
+.emptyIcon {
+  width: 1rem;
+  height: 1rem;
+
+  color: #c9b59c;
+}
+
+.sessionItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  width: 100%;
+
+  padding: 0.6rem;
+
+  background: white;
+  border: 1px solid rgba(217, 207, 199, 0.7);
+  border-radius: 12px;
+
+  color: #6f6a64;
+
+  text-align: left;
+  cursor: pointer;
+
+  transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+.sessionItem:hover {
+  background: rgba(239, 233, 227, 0.6);
+  color: #2f2f2f;
+}
+
+.sessionItemActive {
+  background: #efe9e3;
+  border-color: #c9b59c;
+  color: #2f2f2f;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.sessionIcon {
+  width: 0.85rem;
+  height: 0.85rem;
+  flex-shrink: 0;
+
+  color: #6f6a64;
+}
+
+.sessionIconActive {
+  color: #c9b59c;
+}
+
+.sessionText {
+  min-width: 0;
+}
+
+.sessionTitle {
+  margin: 0;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sessionDate {
+  display: block;
+
+  margin-top: 0.1rem;
+
+  font-size: 0.62rem;
+  color: rgba(111, 106, 100, 0.8);
+}
+
+.footer {
+  padding-top: 0.5rem;
+
+  border-top: 1px solid rgba(217, 207, 199, 0.8);
+
+  font-size: 0.62rem;
+  text-align: center;
+  color: #6f6a64;
+}

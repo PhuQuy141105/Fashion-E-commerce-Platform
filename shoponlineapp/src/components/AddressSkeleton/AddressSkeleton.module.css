@@ -1,0 +1,124 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 220px;
+
+  padding: 1.5rem;
+
+  background: white;
+  border: 1px solid rgba(217, 207, 199, 0.5);
+  border-radius: 20px;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.bar {
+  background: #efe9e3;
+  border-radius: 6px;
+
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  margin-bottom: 1rem;
+}
+
+.barTitle {
+  height: 1.25rem;
+  width: 9rem;
+}
+
+.barPill {
+  height: 1.5rem;
+  width: 5rem;
+  border-radius: 9999px;
+}
+
+.lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.line1 {
+  height: 1rem;
+  width: 12rem;
+  opacity: 0.7;
+}
+
+.line2 {
+  height: 1rem;
+  width: 100%;
+  opacity: 0.7;
+}
+
+.line3 {
+  height: 1rem;
+  width: 75%;
+  opacity: 0.7;
+}
+
+.footerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 1rem;
+
+  border-top: 1px solid rgba(217, 207, 199, 0.3);
+}
+
+.footerLabel {
+  height: 1rem;
+  width: 6rem;
+  opacity: 0.8;
+}
+
+.footerActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.footerButton {
+  height: 2rem;
+  width: 4rem;
+  border-radius: 8px;
+}
+
+.footerIcon {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 8px;
+}

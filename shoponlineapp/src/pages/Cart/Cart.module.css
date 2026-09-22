@@ -1,0 +1,315 @@
+.page {
+  max-width: 80rem;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  padding: 2rem 1rem 5rem;
+
+  color: #2f2f2f;
+}
+
+@media (min-width: 640px) {
+  .page {
+    padding: 2rem 1.5rem 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page {
+    padding: 2rem 2rem 5rem;
+  }
+}
+
+.headerRow {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  justify-content: space-between;
+
+  padding-bottom: 1.25rem;
+
+  border-bottom: 1px solid rgba(217, 207, 199, 0.8);
+}
+
+@media (min-width: 640px) {
+  .headerRow {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+
+  background: none;
+  border: none;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6f6a64;
+
+  cursor: pointer;
+
+  transition: color 150ms ease;
+}
+
+.backLink:hover {
+  color: #2f2f2f;
+}
+
+.backIcon {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+.titleRow {
+  display: flex;
+  gap: 0.75rem;
+  margin: 10px 0
+}
+
+.title {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2f2f2f;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 2.1rem;
+  }
+}
+
+.itemBadge {
+  padding: 0.25rem 0.7rem;
+
+  background: #efe9e3;
+  border: 1px solid #d9cfc7;
+  border-radius: 9999px;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.subtitle {
+  margin: 0.25rem 0 0;
+
+  font-size: 0.8rem;
+  color: #6f6a64;
+}
+
+.clearAllButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  align-self: flex-start;
+
+  padding: 0.6rem 1rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 12px;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #6f6a64;
+
+  cursor: pointer;
+
+  transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease;
+}
+
+.clearAllButton:hover {
+  color: #e11d48;
+  background: #fff1f2;
+  border-color: #fecdd3;
+}
+
+.clearAllIcon {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.banner {
+  padding: 0.75rem 1rem;
+
+  border-radius: 12px;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.bannerSuccess {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
+}
+
+.bannerError {
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  color: #9f1239;
+}
+
+.errorState {
+  padding: 2.5rem;
+  text-align: center;
+
+  background: white;
+  border: 1px solid rgba(217, 207, 199, 0.7);
+  border-radius: 24px;
+}
+
+.errorState p {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  color: #e11d48;
+}
+
+.retryButton {
+  padding: 0.55rem 1.1rem;
+
+  background: #efe9e3;
+  border: none;
+  border-radius: 12px;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #2f2f2f;
+
+  cursor: pointer;
+}
+
+.retryButton:hover {
+  background: #d9cfc7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.itemsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.selectAllBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0.875rem 1.1rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 16px;
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.selectAllLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.selectAllCheckbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 1.4rem;
+  height: 1.4rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 8px;
+
+  color: transparent;
+  cursor: pointer;
+
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.selectAllCheckbox:hover {
+  border-color: #c9b59c;
+}
+
+.selectAllCheckboxActive {
+  background: #c9b59c;
+  border-color: #c9b59c;
+  color: white;
+}
+
+.selectAllIcon {
+  width: 0.85rem;
+  height: 0.85rem;
+  stroke-width: 3;
+}
+
+.selectAllLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  background: none;
+  border: none;
+  padding: 0;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #2f2f2f;
+
+  cursor: pointer;
+}
+
+.selectAllCount {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #6f6a64;
+}
+
+.clearSelectionButton {
+  background: none;
+  border: none;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #6f6a64;
+
+  cursor: pointer;
+
+  transition: color 150ms ease;
+}
+
+.clearSelectionButton:hover {
+  color: #2f2f2f;
+}
+
+.summaryColumn {
+  display: flex;
+  flex-direction: column;
+}

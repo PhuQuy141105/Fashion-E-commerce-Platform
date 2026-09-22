@@ -1,0 +1,429 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+
+  background: rgba(47, 47, 47, 0.5);
+  backdrop-filter: blur(3px);
+}
+
+.modal {
+  width: 100%;
+  max-width: 32rem;
+  max-height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 24px;
+
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+
+  color: #2f2f2f;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-shrink: 0;
+
+  padding: 1.5rem;
+
+  background: #faf8f5;
+  border-bottom: 1px solid rgba(217, 207, 199, 0.8);
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: justify;
+}
+
+.headerIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.75rem;
+  height: 2.75rem;
+
+  background: rgba(201, 181, 156, 0.2);
+  border: 1px solid #c9b59c;
+  border-radius: 16px;
+}
+
+.headerIcon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #2f2f2f;
+}
+
+.title {
+  margin: 0;
+
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.subtitle {
+  margin-top: 10px;
+
+  font-size: 0.72rem;
+  color: #6f6a64;
+}
+
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.4rem;
+
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+
+  color: #6f6a64;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background: #efe9e3;
+  color: #2f2f2f;
+}
+
+.closeButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.closeButton svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.body {
+  flex: 1;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  padding: 1.5rem;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+
+  padding: 0.75rem;
+
+  background: #faf8f5;
+  border: 1px solid rgba(217, 207, 199, 0.8);
+  border-radius: 14px;
+}
+
+.infoBoxAccent {
+  background: rgba(201, 181, 156, 0.15);
+  border-color: #c9b59c;
+}
+
+.infoLabel {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6f6a64;
+}
+
+.infoValue {
+  margin: 0;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #2f2f2f;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.infoValueBig {
+  margin: 0;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.ordersSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ordersSectionHeader {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6f6a64;
+}
+
+.ordersList {
+  max-height: 12rem;
+  overflow-y: auto;
+
+  border: 1px solid #d9cfc7;
+  border-radius: 16px;
+
+  background: white;
+}
+
+.orderRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  text-align: justify;
+  padding: 0.65rem 1rem;
+
+  border-bottom: 1px solid rgba(217, 207, 199, 0.5);
+
+  font-size: 0.75rem;
+}
+
+.orderRow:last-child {
+  border-bottom: none;
+}
+
+.orderRowLeft {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.orderRowCode {
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.orderRowCustomer {
+  font-size: 0.68rem;
+  color: #6f6a64;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.orderRowAmount {
+  flex-shrink: 0;
+
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.noteField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.noteLabel {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6f6a64;
+}
+
+.noteInput {
+  padding: 0.65rem 0.9rem;
+
+  background: #faf8f5;
+  border: 1px solid #d9cfc7;
+  border-radius: 12px;
+
+  font-size: 0.8rem;
+  color: #2f2f2f;
+
+  outline: none;
+
+  transition: border-color 150ms ease, background-color 150ms ease;
+}
+
+.noteInput:focus {
+  background: white;
+  border-color: #c9b59c;
+}
+
+.confirmBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  padding: 0.875rem 1rem;
+
+  background: rgba(255, 251, 235, 0.7);
+  border: 1px solid #fde68a;
+  border-radius: 16px;
+  text-align: justify;
+    line-height: 18px;
+}
+
+.confirmLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #92400e;
+
+  cursor: pointer;
+}
+
+.confirmCheckbox {
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+
+  accent-color: #2f2f2f;
+  cursor: pointer;
+}
+
+.confirmHint {
+  margin: 0;
+  font-size: 0.68rem;
+  color: #92400e;
+}
+
+.errorBanner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.65rem 0.85rem;
+
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  border-radius: 12px;
+
+  font-size: 0.72rem;
+  color: #9f1239;
+}
+
+.errorIcon {
+  width: 0.85rem;
+  height: 0.85rem;
+  flex-shrink: 0;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.65rem;
+  flex-shrink: 0;
+
+  padding: 1.25rem 1.5rem;
+
+  background: #faf8f5;
+  border-top: 1px solid rgba(217, 207, 199, 0.8);
+}
+
+.cancelButton {
+  padding: 0.65rem 1.1rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 12px;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #6f6a64;
+
+  cursor: pointer;
+
+  transition: background-color 150ms ease;
+}
+
+.cancelButton:hover:not(:disabled) {
+  background: #efe9e3;
+}
+
+.cancelButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.confirmButton {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  padding: 0.65rem 1.35rem;
+
+  background: #c9b59c;
+  border: 1px solid #b8a287;
+  border-radius: 12px;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #2f2f2f;
+
+  cursor: pointer;
+
+  transition: background-color 150ms ease;
+}
+
+.confirmButton:hover:not(:disabled) {
+  background: #baa48a;
+}
+
+.confirmButton:disabled {
+  background: #efe9e3;
+  border-color: #d9cfc7;
+  color: #6f6a64;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.confirmIcon {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+.spinnerIcon {
+  width: 0.9rem;
+  height: 0.9rem;
+
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

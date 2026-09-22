@@ -1,0 +1,291 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.headerIcon {
+  width: 0.9rem;
+  height: 0.9rem;
+  color: #c9b59c;
+}
+
+.headerTitle {
+  margin: 0;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.countTag {
+  padding: 0.1rem 0.6rem;
+
+  background: #faf8f5;
+  border: 1px solid #d9cfc7;
+  border-radius: 9999px;
+
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #6f6a64;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 2rem;
+  text-align: center;
+
+  background: white;
+  border: 1px dashed #d9cfc7;
+  border-radius: 20px;
+
+  color: #6f6a64;
+  font-size: 0.8rem;
+}
+
+.emptyIcon {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: #c9b59c;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.skeletonCard {
+  height: 12rem;
+
+  background: #efe9e3;
+  border-radius: 24px;
+
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+
+  padding: 1.1rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 24px;
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+
+  cursor: pointer;
+
+  transition: border-color 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+}
+
+.card:hover {
+  border-color: #baa48a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.cardSelected {
+  border-color: #c9b59c;
+  background: rgba(250, 248, 245, 0.9);
+  box-shadow: 0 0 0 2px rgba(201, 181, 156, 0.5);
+}
+
+.cardTopRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.avatarRow {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-width: 0;
+}
+
+.avatar,
+.avatarPlaceholder {
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+
+  border-radius: 16px;
+  border: 1px solid #d9cfc7;
+}
+
+.avatar {
+  object-fit: cover;
+}
+
+.avatarPlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #efe9e3;
+
+  font-size: 1rem;
+  font-weight: 700;
+  color: #6f6a64;
+}
+
+.nameBlock {
+  min-width: 0;
+  text-align: justify;
+}
+
+.name {
+  margin: 0;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #2f2f2f;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.phone {
+  margin: 0;
+
+  font-size: 0.68rem;
+  color: #6f6a64;
+}
+
+.selectedBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 1.35rem;
+  height: 1.35rem;
+
+  background: #c9b59c;
+  border-radius: 9999px;
+
+  color: #2f2f2f;
+}
+
+.selectedBadgeIcon {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+.metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+
+  margin-top: 0.875rem;
+  padding: 0.7rem;
+
+  background: #faf8f5;
+  border: 1px solid rgba(217, 207, 199, 0.7);
+  border-radius: 16px;
+}
+
+.metricRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.metricLabel {
+  font-size: 0.68rem;
+  color: #6f6a64;
+}
+
+.metricValue {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #2f2f2f;
+}
+
+.metricValueBig {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #2f2f2f;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+
+  padding-top: 0.75rem;
+
+  border-top: 1px solid rgba(217, 207, 199, 0.6);
+}
+
+.settledText {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #6f6a64;
+}
+
+.viewButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+
+  padding: 0.4rem 0.7rem;
+
+  background: #faf8f5;
+  border: 1px solid #d9cfc7;
+  border-radius: 10px;
+
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #2f2f2f;
+
+  cursor: pointer;
+
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.viewButton:hover {
+  background: #c9b59c;
+  border-color: #b8a287;
+}
+
+.viewButtonIcon {
+  width: 0.7rem;
+  height: 0.7rem;
+}

@@ -1,0 +1,218 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  padding: 1.5rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 26px;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+
+  color: #2f2f2f;
+}
+
+@media (min-width: 640px) {
+  .card {
+    padding: 1.75rem;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 1rem;
+
+  border-bottom: 1px solid rgba(217, 207, 199, 0.8);
+}
+
+.title {
+  margin: 0;
+
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  padding: 0.25rem 0.75rem;
+
+  border-radius: 9999px;
+  border: 1px solid;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.statusBadgePaid {
+  background: #dcfce7;
+  border-color: #86efac;
+  color: #166534;
+}
+
+.statusBadgePending {
+  background: #fef3c7;
+  border-color: #fcd34d;
+  color: #92400e;
+}
+
+.statusIcon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  font-size: 0.8rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rowLabel {
+  color: #6f6a64;
+}
+
+.rowValue {
+  font-weight: 600;
+  color: #2f2f2f;
+}
+
+.discountRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-weight: 700;
+  color: #15803d;
+}
+
+.discountLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.discountIcon {
+  width: 0.85rem;
+  height: 0.85rem;
+
+  color: #059669;
+}
+
+.totalRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  padding-top: 0.75rem;
+
+  border-top: 1px solid #d9cfc7;
+}
+
+.totalLabel {
+  display: block;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.totalSub {
+  display: block;
+
+  margin-top: 0.1rem;
+
+  font-size: 0.65rem;
+  color: #6f6a64;
+}
+
+.totalValue {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #2f2f2f;
+  letter-spacing: -0.01em;
+}
+
+.addressHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding-bottom: 0.875rem;
+
+  border-bottom: 1px solid rgba(217, 207, 199, 0.8);
+}
+
+.addressIcon {
+  width: 1rem;
+  height: 1rem;
+
+  color: #c9b59c;
+}
+
+.addressTitle {
+  margin: 0;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.addressBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-align: left;
+  font-size: 0.78rem;
+}
+
+.recipientName {
+  margin: 0;
+
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.phoneRow {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  color: #6f6a64;
+}
+
+.phoneIcon {
+  width: 0.8rem;
+  height: 0.8rem;
+
+  color: #c9b59c;
+}
+
+.addressText {
+  margin: 0.2rem 0 0;
+
+  line-height: 1.55;
+  color: #2f2f2f;
+}

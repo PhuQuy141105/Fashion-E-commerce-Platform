@@ -1,0 +1,158 @@
+{% extends "email/base_email.html" %}
+{% block title %}Xác nhận đặt hàng - {{ order.code }}{% endblock %}
+{% block content %}
+
+<h1 style="margin:0 0 16px; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:20px; line-height:28px; font-weight:700; color:#3f3222;">
+    Xin chào {{ display_name }},
+</h1>
+
+<p style="margin:0 0 20px; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:24px; color:#4a3b26;">
+    Cảm ơn bạn đã đặt hàng tại <strong>Fuwuys Shop</strong>!
+    Đơn hàng của bạn đã được ghi nhận và đang chờ xử lý
+</p>
+
+<table
+    role="presentation"
+    style="width:100%; margin: 0 auto; padding:0; background-color:#f7f1e3; border:1px solid #ecdfc0; border-collapse:separate; border-spacing:0; border-radius:6px;"
+>
+    <tr>
+        <td style="padding:16px 20px; font-family:Arial, Helvetica, sans-serif;">
+
+            <p style="margin:0 0 6px; padding:0; font-size:13px; line-height:20px; color:#8a7b5c;">
+                Mã đơn hàng
+            </p>
+
+            <p style="margin:0 0 14px; padding:0; font-size:16px; line-height:22px; font-weight:700; color:#3f3222;">
+                {{ order.code }}
+            </p>
+
+            <p style="margin:0 0 6px; padding:0; font-size:13px; line-height:20px; color:#8a7b5c;">
+                Phương thức thanh toán
+            </p>
+
+            <p style="margin:0 0 14px; padding:0; font-size:15px; line-height:22px; color:#3f3222;">
+                {{ payment_method_label }}
+            </p>
+
+            <p style="margin:0 0 6px; padding:0; font-size:13px; line-height:20px; color:#8a7b5c;">
+                Dự kiến giao hàng
+            </p>
+
+            <p style="margin:0; padding:0; font-size:15px; line-height:22px; color:#3f3222;">
+                {{ expected_delivery_date }}
+            </p>
+
+        </td>
+    </tr>
+</table>
+
+<h2 style="margin:24px 0 12px; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:16px; line-height:22px; font-weight:700; color:#3f3222;">
+    Chi tiết đơn hàng
+</h2>
+
+<table
+    role="presentation"
+    style="width:100%; margin:auto; padding:0; border:0; border-collapse:collapse; border-spacing:0;"
+>
+    <thead>
+        <tr>
+            <th
+                style="padding:8px 0; border-bottom:2px solid #ecdfc0; font-family:Arial, Helvetica, sans-serif; font-size:13px; line-height:20px; font-weight:400; color:#8a7b5c; text-align:left;"
+            >
+                Sản phẩm
+            </th>
+
+            <th
+                style="padding:8px 0; border-bottom:2px solid #ecdfc0; font-family:Arial, Helvetica, sans-serif; font-size:13px; line-height:20px; font-weight:400; color:#8a7b5c; text-align:center;"
+            >
+                SL
+            </th>
+
+            <th
+                style="padding:8px 0; border-bottom:2px solid #ecdfc0; font-family:Arial, Helvetica, sans-serif; font-size:13px; line-height:20px; font-weight:400; color:#8a7b5c; text-align:right;"
+            >
+                Thành tiền
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for item in items %}
+        <tr>
+            <td
+                style="padding:10px 0; border-bottom:1px solid #f1ead8; font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#3f3222; text-align:left;"
+            >
+                {{ item.product_name }}<br>
+                <span style="font-size:12px; line-height:18px; color:#a89876;">
+                    {{ item.size }} / {{ item.color }}
+                </span>
+            </td>
+
+            <td
+                style="padding:10px 0; border-bottom:1px solid #f1ead8; font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#3f3222; text-align:center;"
+            >
+                {{ item.quantity }}
+            </td>
+
+            <td
+                style="padding:10px 0; border-bottom:1px solid #f1ead8; font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#3f3222; text-align:right;"
+            >
+                {{ item.subtotal|floatformat:0 }}đ
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<table
+    role="presentation"
+    style="width:100%; margin:0; padding:0; border:0; border-collapse:collapse; border-spacing:0;"
+>
+    <tr>
+        <td style="padding:4px 0; font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#8a7b5c; text-align:left;">
+            Tạm tính
+        </td>
+
+        <td style="padding:4px 0; font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#3f3222; text-align:right;">
+            {{ order.subtotal_amount|floatformat:0 }}đ
+        </td>
+    </tr>
+
+    <tr>
+        <td style="padding:4px 0; font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#8a7b5c; text-align:left;">
+            Phí vận chuyển
+        </td>
+
+        <td style="padding:4px 0; font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#3f3222; text-align:right;">
+            {{ order.shipping_fee|floatformat:0 }}đ
+        </td>
+    </tr>
+
+    {% if order.discount_amount %}
+    <tr>
+        <td style="padding:4px 0; font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#8a7b5c; text-align:left;">
+            Giảm giá
+        </td>
+
+        <td style="padding:4px 0; font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#16a34a; text-align:right;">
+            -{{ order.discount_amount|floatformat:0 }}đ
+        </td>
+    </tr>
+    {% endif %}
+
+    <tr>
+        <td style="padding:10px 0 0; border-top:2px solid #ecdfc0; font-family:Arial, Helvetica, sans-serif; font-size:16px; line-height:22px; font-weight:700; color:#3f3222; text-align:left;">
+            Tổng cộng
+        </td>
+
+        <td style="padding:10px 0 0; border-top:2px solid #ecdfc0; font-family:Arial, Helvetica, sans-serif; font-size:16px; line-height:22px; font-weight:700; color:#3f3222; text-align:right;">
+            {{ order.total_amount|floatformat:0 }}đ
+        </td>
+    </tr>
+</table>
+
+<p style="margin:24px 0 0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#8a7b5c;">
+    Địa chỉ giao hàng: {{ order.shipping_address }}
+</p>
+
+{% endblock %}

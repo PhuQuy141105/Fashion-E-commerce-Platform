@@ -1,0 +1,420 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+
+  overflow-y: auto;
+}
+
+@media (min-width: 640px) {
+  .overlay {
+    padding: 1.5rem;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(47, 47, 47, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+.modal {
+  position: relative;
+  z-index: 10;
+  padding: 0 20px;
+  max-width: 42rem;
+  margin: 2rem 0;
+
+  background: white;
+  border: 1px solid rgba(217, 207, 199, 0.7);
+  border-radius: 24px;
+  overflow: hidden;
+
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+
+  color: #2f2f2f;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.75rem 1.5rem 1.25rem;
+
+  background: rgba(249, 248, 246, 0.8);
+  border-bottom: 1px solid rgba(217, 207, 199, 0.4);
+}
+
+@media (min-width: 640px) {
+  .header {
+    padding: 1.75rem 2rem 1.25rem;
+  }
+}
+
+.headerLeft {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.headerIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+
+  background: #efe9e3;
+  border: 1px solid rgba(217, 207, 199, 0.5);
+  border-radius: 12px;
+
+  color: #2f2f2f;
+}
+
+.headerIcon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #c9b59c;
+}
+
+.headerTitle {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2f2f2f;
+  letter-spacing: -0.01em;
+}
+
+.headerSubtitle {
+  margin: 0.1rem 0 0;
+
+  font-size: 0.72rem;
+  color: #6f6a64;
+}
+
+.closeButton {
+  padding: 0.5rem;
+
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+
+  color: #6f6a64;
+  cursor: pointer;
+
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.closeButton:hover {
+  color: #2f2f2f;
+  background: #efe9e3;
+}
+
+.closeButton svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.errorBanner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+
+  margin: 1.25rem 1.5rem 0;
+  padding: 1rem;
+
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  border-radius: 12px;
+
+  font-size: 0.78rem;
+  color: #9f1239;
+}
+
+@media (min-width: 640px) {
+  .errorBanner {
+    margin: 1.25rem 2rem 0;
+  }
+}
+
+.errorBannerIcon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+
+  color: #e11d48;
+}
+
+.errorBannerTitle {
+  margin: 0;
+  font-weight: 600;
+}
+
+.errorBannerText {
+  margin: 0.15rem 0 0;
+  color: #be123c;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: left;
+  padding: 1.5rem;
+  max-height: 72vh;
+}
+
+@media (min-width: 640px) {
+  .form {
+    padding: 1.5rem 2rem;
+  }
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.row3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+}
+
+@media (min-width: 640px) {
+  .row2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .row3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.label {
+  display: block;
+
+  margin-bottom: 0.375rem;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6f6a64;
+}
+
+.required {
+  color: #f43f5e;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 0.875rem;
+
+  width: 1rem;
+  height: 1rem;
+
+  color: #6f6a64;
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+
+  padding: 0.65rem 1rem;
+
+  background: #f9f8f6;
+  border: 1px solid #d9cfc7;
+  border-radius: 12px;
+
+  font-size: 0.85rem;
+  color: #2f2f2f;
+
+  outline: none;
+
+  transition: background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.input::placeholder {
+  color: rgba(111, 106, 100, 0.6);
+}
+
+.input:focus {
+  background: white;
+  border-color: #c9b59c;
+  box-shadow: 0 0 0 3px rgba(201, 181, 156, 0.2);
+}
+
+.inputWithIcon {
+  padding-left: 2.5rem;
+}
+
+.inputError {
+  border-color: #fb7185;
+}
+
+.inputError:focus {
+  box-shadow: 0 0 0 3px rgba(254, 205, 211, 0.6);
+}
+
+.fieldError {
+  margin: 0.25rem 0 0;
+
+  font-size: 0.7rem;
+  color: #e11d48;
+}
+
+.checkboxSection {
+  padding-top: 0.25rem;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkboxVisualWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 0.1rem;
+}
+
+.checkboxInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.checkboxVisual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1.25rem;
+  height: 1.25rem;
+
+  background: #f9f8f6;
+  border: 1px solid #d9cfc7;
+  border-radius: 6px;
+
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.checkboxVisualChecked {
+  background: #2f2f2f;
+  border-color: #2f2f2f;
+  color: white;
+}
+
+.checkboxCheckIcon {
+  width: 0.875rem;
+  height: 0.875rem;
+  stroke-width: 3;
+}
+
+.checkboxTitle {
+  display: block;
+
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #2f2f2f;
+}
+
+.checkboxHint {
+  display: block;
+
+  margin-top: 0.1rem;
+
+  font-size: 0.72rem;
+  color: #6f6a64;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+
+  padding-top: 1.5rem;
+
+  border-top: 1px solid rgba(217, 207, 199, 0.5);
+}
+
+.cancelButton {
+  padding: 0.65rem 1.25rem;
+
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #6f6a64;
+
+  cursor: pointer;
+
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.cancelButton:hover {
+  color: #2f2f2f;
+  background: #efe9e3;
+}
+
+.cancelButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.saveButton {
+  padding: 0.7rem 1.75rem;
+
+  background: #c9b59c;
+  border: 1px solid #b8a287;
+  border-radius: 12px;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #2f2f2f;
+
+  cursor: pointer;
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+  transition: background-color 150ms ease;
+}
+
+.saveButton:hover:not(:disabled) {
+  background: #baa48a;
+}
+
+.saveButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

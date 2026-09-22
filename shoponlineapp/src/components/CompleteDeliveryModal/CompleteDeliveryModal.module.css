@@ -1,0 +1,255 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+
+  background: rgba(47, 47, 47, 0.5);
+  backdrop-filter: blur(3px);
+}
+
+.modal {
+  width: 100%;
+  max-width: 26rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+
+  padding: 1.5rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 24px;
+
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+
+  color: #2f2f2f;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.75rem;
+  height: 2.75rem;
+
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 16px;
+
+  color: #047857;
+}
+
+.iconBox svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.4rem;
+
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+
+  color: #6f6a64;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background: #efe9e3;
+  color: #2f2f2f;
+}
+
+.closeButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.closeButton svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.title {
+  margin: 0;
+
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.subtitle {
+  margin: 0;
+
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: #6f6a64;
+}
+
+.subtitle strong {
+  color: #2f2f2f;
+}
+
+.previewBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  padding: 0.875rem 1rem;
+
+  background: #faf8f5;
+  border: 1px solid rgba(217, 207, 199, 0.8);
+  border-radius: 14px;
+}
+
+.previewRow,
+.previewRowLast {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 0.5rem;
+
+  border-bottom: 1px solid rgba(217, 207, 199, 0.6);
+
+  font-size: 0.78rem;
+}
+
+.previewRowLast {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.previewLabel {
+  color: #6f6a64;
+}
+
+.previewValue {
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.previewValueBig {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #047857;
+}
+
+.errorBanner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.65rem 0.85rem;
+
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  border-radius: 12px;
+
+  font-size: 0.72rem;
+  color: #9f1239;
+}
+
+.errorIcon {
+  width: 0.85rem;
+  height: 0.85rem;
+  flex-shrink: 0;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.65rem;
+
+  padding-top: 0.5rem;
+
+  border-top: 1px solid rgba(217, 207, 199, 0.7);
+}
+
+.cancelButton {
+  padding: 0.65rem 1.1rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 12px;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #6f6a64;
+
+  cursor: pointer;
+
+  transition: background-color 150ms ease;
+}
+
+.cancelButton:hover:not(:disabled) {
+  background: #efe9e3;
+}
+
+.cancelButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.confirmButton {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  padding: 0.65rem 1.25rem;
+
+  background: #047857;
+  border: none;
+  border-radius: 12px;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: white;
+
+  cursor: pointer;
+
+  transition: background-color 150ms ease;
+}
+
+.confirmButton:hover:not(:disabled) {
+  background: #065f46;
+}
+
+.confirmButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.confirmIcon {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+.spinnerIcon {
+  width: 0.9rem;
+  height: 0.9rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

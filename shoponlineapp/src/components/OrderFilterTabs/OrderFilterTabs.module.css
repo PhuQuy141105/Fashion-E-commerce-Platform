@@ -1,0 +1,75 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  overflow-x: auto;
+  padding-bottom: 0.15rem;
+
+  scrollbar-width: none;
+}
+
+.wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+
+  padding: 0.5rem 0.8rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 12px;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #6f6a64;
+
+  white-space: nowrap;
+  cursor: pointer;
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+
+  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+}
+
+.tab:hover {
+  background: #efe9e3;
+  color: #2f2f2f;
+}
+
+.tabActive {
+  background: #2f2f2f;
+  border-color: #2f2f2f;
+  color: #f9f8f6;
+}
+
+.tabActive:hover {
+  background: #2f2f2f;
+  color: #f9f8f6;
+}
+
+.allIcon {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.count {
+  padding: 0.05rem 0.4rem;
+
+  background: #efe9e3;
+  border-radius: 9999px;
+
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.countActive {
+  background: #c9b59c;
+  color: #2f2f2f;
+}

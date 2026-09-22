@@ -1,0 +1,209 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block extrastyle %}
+  {{ block.super }}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="stats-page">
+
+  <div class="stats-header">
+    <h1>Thống kê tổng quan</h1>
+    <p class="stats-subtitle">Cập nhật theo thời gian thực từ dữ liệu hệ thống.</p>
+  </div>
+
+  <!-- ================= 1. THẺ TỔNG QUAN ================= -->
+  <div class="stats-grid stats-grid-4">
+    <div class="stat-card">
+      <span class="stat-label">Doanh thu hôm nay</span>
+      <span class="stat-value">{{ today_revenue|floatformat:0 }} đ</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">Doanh thu tháng này</span>
+      <span class="stat-value">{{ month_revenue|floatformat:0 }} đ</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">Tổng doanh thu (đã giao)</span>
+      <span class="stat-value">{{ total_revenue|floatformat:0 }} đ</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">Giá trị đơn TB (AOV)</span>
+      <span class="stat-value">{{ avg_order_value|floatformat:0 }} đ</span>
+    </div>
+  </div>
+
+  <div class="stats-grid stats-grid-4">
+    <div class="stat-card">
+      <span class="stat-label">Tổng số đơn hàng</span>
+      <span class="stat-value">{{ total_orders }}</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">Tỷ lệ huỷ đơn</span>
+      <span class="stat-value">{{ cancellation_rate }}%</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">Điểm đánh giá TB</span>
+      <span class="stat-value">{{ avg_rating }} / 5 <small>({{ total_reviews }} đánh giá)</small></span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">Khách hàng mới tháng này</span>
+      <span class="stat-value">{{ new_customers_month }} <small>/ {{ total_customers }} tổng</small></span>
+    </div>
+  </div>
+
+  <!-- ================= 2. DOANH THU 7 NGÀY GẦN NHẤT ================= -->
+  <div class="stats-section">
+    <h2>Doanh thu 7 ngày gần nhất</h2>
+    <div class="chart-bar-row">
+      {% for day in daily_revenue %}
+        <div class="chart-bar-col">
+          <div class="chart-bar-track">
+            <div class="chart-bar-fill" style="height: {% widthratio day.total max_daily_revenue 100 %}%;"
+                 title="{{ day.total|floatformat:0 }} đ"></div>
+          </div>
+          <span class="chart-bar-value">{{ day.total|floatformat:0 }}</span>
+          <span class="chart-bar-label">{{ day.date|date:"d/m" }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="stats-two-col">
+
+    <!-- ================= 3. ĐƠN HÀNG THEO TRẠNG THÁI ================= -->
+    <div class="stats-section">
+      <h2>Đơn hàng theo trạng thái</h2>
+      <table class="stats-table">
+        <thead>
+          <tr><th>Trạng thái</th><th class="align-right">Số đơn</th></tr>
+        </thead>
+        <tbody>
+          {% for row in order_status_breakdown %}
+            <tr>
+              <td><span class="badge badge-{{ row.key|lower }}">{{ row.label }}</span></td>
+              <td class="align-right">{{ row.count }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ================= 4. PHƯƠNG THỨC THANH TOÁN ================= -->
+    <div class="stats-section">
+      <h2>Phương thức thanh toán</h2>
+      <table class="stats-table">
+        <thead>
+          <tr><th>Phương thức</th><th class="align-right">Số đơn</th></tr>
+        </thead>
+        <tbody>
+          {% for row in payment_method_breakdown %}
+            <tr><td>{{ row.label }}</td><td class="align-right">{{ row.count }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <h3 class="stats-subheading">Trạng thái thanh toán PayOS</h3>
+      <table class="stats-table">
+        <thead>
+          <tr><th>Trạng thái</th><th class="align-right">Số giao dịch</th></tr>
+        </thead>
+        <tbody>
+          {% for row in payment_status_breakdown %}
+            <tr><td>{{ row.label }}</td><td class="align-right">{{ row.count }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- ================= 5. SẢN PHẨM BÁN CHẠY NHẤT ================= -->
+  <div class="stats-section">
+    <h2>Top 10 sản phẩm bán chạy nhất</h2>
+    <table class="stats-table">
+      <thead>
+        <tr><th>#</th><th>Sản phẩm</th><th class="align-right">Số lượng bán</th><th class="align-right">Doanh thu</th></tr>
+      </thead>
+      <tbody>
+        {% for p in top_products %}
+          <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ p.variant__product__name }}</td>
+            <td class="align-right">{{ p.total_sold }}</td>
+            <td class="align-right">{{ p.total_revenue|floatformat:0 }} đ</td>
+          </tr>
+        {% empty %}
+          <tr><td colspan="4" class="empty-row">Chưa có đơn hàng nào được giao thành công.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="stats-two-col">
+
+    <!-- ================= 6. VOUCHER DÙNG NHIỀU NHẤT ================= -->
+    <div class="stats-section">
+      <h2>Voucher dùng nhiều nhất</h2>
+      <table class="stats-table">
+        <thead>
+          <tr><th>Mã</th><th class="align-right">Đã dùng</th><th class="align-right">Giới hạn</th></tr>
+        </thead>
+        <tbody>
+          {% for v in top_vouchers %}
+            <tr>
+              <td><code>{{ v.code }}</code></td>
+              <td class="align-right">{{ v.used_count }}</td>
+              <td class="align-right">{{ v.usage_limit }}</td>
+            </tr>
+          {% empty %}
+            <tr><td colspan="3" class="empty-row">Chưa có voucher nào được sử dụng.</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ================= 7. ĐỐI SOÁT COD ================= -->
+    <div class="stats-section">
+      <h2>Đối soát COD</h2>
+      <div class="stats-grid stats-grid-2 no-gap-top">
+        <div class="stat-card">
+          <span class="stat-label">Đang chờ đối soát</span>
+          <span class="stat-value">{{ cod_pending_amount|floatformat:0 }} đ</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Đã đối soát</span>
+          <span class="stat-value">{{ cod_remitted_amount|floatformat:0 }} đ</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ================= 8. TỒN KHO SẮP HẾT ================= -->
+  <div class="stats-section">
+    <h2>Sản phẩm sắp hết / hết hàng (dưới 10)</h2>
+    <table class="stats-table">
+      <thead>
+        <tr><th>Sản phẩm</th><th class="align-right">Tồn kho</th></tr>
+      </thead>
+      <tbody>
+        {% for p in low_stock_products %}
+          <tr>
+            <td>{{ p.name }}</td>
+            <td class="align-right">
+              <span class="badge {% if not p.stock %}badge-cancelled{% else %}badge-pending{% endif %}">
+                {{ p.stock|default:0 }}
+              </span>
+            </td>
+          </tr>
+        {% empty %}
+          <tr><td colspan="2" class="empty-row">Không có sản phẩm nào sắp hết hàng.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+</div>
+{% endblock %}

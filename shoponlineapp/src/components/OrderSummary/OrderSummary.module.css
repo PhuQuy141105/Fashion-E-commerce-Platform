@@ -1,0 +1,230 @@
+.card {
+  position: sticky;
+  top: 6rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  padding: 1.5rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 26px;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+  color: #2f2f2f;
+}
+
+@media (min-width: 640px) {
+  .card {
+    padding: 1.75rem;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 1rem;
+
+  border-bottom: 1px solid rgba(217, 207, 199, 0.8);
+}
+
+.title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.itemCount {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #6f6a64;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 0.8rem;
+}
+
+.rowLabel {
+  color: #6f6a64;
+}
+
+.rowValue {
+  font-weight: 600;
+  color: #2f2f2f;
+}
+
+.note {
+  padding: 0.65rem 0.75rem;
+
+  background: rgba(239, 233, 227, 0.5);
+  border: 1px solid rgba(217, 207, 199, 0.7);
+  border-radius: 12px;
+
+  font-size: 0.68rem;
+  line-height: 1.5;
+  color: #6f6a64;
+}
+
+.totalRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+
+  padding-top: 33px;
+
+  border-top: 1px solid #d9cfc7;
+}
+
+.totalLabel {
+  display: block;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.totalValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2f2f2f;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 640px) {
+  .totalValue {
+    font-size: 1.75rem;
+  }
+}
+
+.warningNotice {
+  padding: 0.75rem;
+
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  border-radius: 14px;
+
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: #9f1239;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.checkoutButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  padding: 0.9rem 1.25rem;
+
+  background: #2f2f2f;
+  border: none;
+  border-radius: 14px;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #f9f8f6;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  transition: background-color 150ms ease;
+}
+
+.checkoutButton:hover:not(:disabled) {
+  background: black;
+}
+
+.checkoutButton:disabled {
+  background: #d9cfc7;
+  color: #6f6a64;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.checkoutIcon {
+  width: 1rem;
+  height: 1rem;
+
+  color: #c9b59c;
+}
+
+.checkoutButton:disabled .checkoutIcon {
+  color: #6f6a64;
+}
+
+.checkoutArrow {
+  width: 1rem;
+  height: 1rem;
+}
+
+.continueButton {
+  padding: 0.65rem 1rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 14px;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #2f2f2f;
+
+  cursor: pointer;
+
+  transition: background-color 150ms ease;
+}
+
+.continueButton:hover {
+  background: #efe9e3;
+}
+
+.assurances {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  padding-top: 1rem;
+
+  border-top: 1px solid rgba(217, 207, 199, 0.6);
+
+  font-size: 0.68rem;
+  color: #6f6a64;
+}
+
+.assuranceRow {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.assuranceIcon {
+  width: 0.85rem;
+  height: 0.85rem;
+  flex-shrink: 0;
+
+  color: #c9b59c;
+}

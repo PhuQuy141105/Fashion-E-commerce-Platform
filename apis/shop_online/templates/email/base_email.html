@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}Fuwuys Shop{% endblock %}</title>
+</head>
+
+<body
+    style="
+        margin:0;
+        padding:0;
+        width:100%;
+        background-color:#f3ecdd;
+        font-family:Arial, Helvetica, sans-serif;
+        color:#3f3222;
+    "
+>
+
+<table
+    role="presentation"
+    style="
+        width:100%;
+        margin:0;
+        padding:0;
+        border:0;
+        border-collapse:collapse;
+        border-spacing:0;
+        background-color:#f3ecdd;
+    "
+>
+    <tr>
+        <td
+            style="
+                padding:24px 12px;
+                text-align:center;
+            "
+        >
+
+            <table
+                role="presentation"
+                style="
+                    width:100%;
+                    max-width:600px;
+                    margin:0 auto;
+                    padding:0;
+                    border:1px solid #e8dfc8;
+                    border-collapse:separate;
+                    border-spacing:0;
+                    background-color:#fffdf7;
+                    border-radius:10px;
+                "
+            >
+
+                <tr>
+                    <td
+                        style="
+                            padding:24px 20px;
+                            text-align:center;
+                            background-color:#e7d9b7;
+                            border-radius:10px 10px 0 0;
+                        "
+                    >
+                        <span
+                            style="
+                                font-family:Arial, Helvetica, sans-serif;
+                                font-size:22px;
+                                line-height:28px;
+                                font-weight:700;
+                                letter-spacing:1px;
+                                color:#5b4326;
+                                text-transform:uppercase;
+                            "
+                        >
+                            Fuwuys Shop
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td
+                        style="
+                            padding:24px 20px;
+                            background-color:#fffdf7;
+                            font-family:Arial, Helvetica, sans-serif;
+                            font-size:15px;
+                            line-height:24px;
+                            color:#3f3222;
+                        "
+                    >
+                        {% block content %}{% endblock %}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td
+                        style="
+                            padding:20px;
+                            text-align:center;
+                            background-color:#f7f1e3;
+                            border-top:1px solid #ecdfc0;
+                            border-radius:0 0 10px 10px;
+                        "
+                    >
+                        <p
+                            style="
+                                margin:0;
+                                padding:0;
+                                font-size:12px;
+                                line-height:18px;
+                                color:#9c8f72;
+                            "
+                        >
+                            Email này được gửi tự động, vui lòng không phản hồi trực tiếp
+                        </p>
+
+                        <p
+                            style="
+                                margin:4px 0 0;
+                                padding:0;
+                                font-size:12px;
+                                line-height:18px;
+                                color:#9c8f72;
+                            "
+                        >
+                            &copy; {% now "Y" %} Fuwuys Shop.
+                            Mọi thắc mắc vui lòng liên hệ qua ứng dụng hoặc hotline hỗ trợ
+                        </p>
+                    </td>
+                </tr>
+
+            </table>
+
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

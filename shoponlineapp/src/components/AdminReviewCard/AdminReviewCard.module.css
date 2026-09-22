@@ -1,0 +1,311 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  padding: 1.1rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 20px;
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+
+  transition: border-color 150ms ease;
+}
+
+.cardSelected {
+  border-color: #c9b59c;
+  background: #faf8f5;
+  box-shadow: 0 0 0 2px rgba(201, 181, 156, 0.4);
+}
+
+.cardHidden {
+  background: rgba(250, 248, 245, 0.7);
+  opacity: 0.9;
+}
+
+.topRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  justify-content: space-between;
+}
+
+@media (min-width: 640px) {
+  .topRow {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.left {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.checkbox {
+  margin-top: 0.3rem;
+  width: 1rem;
+  height: 1rem;
+  accent-color: #2f2f2f;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.avatar,
+.avatarPlaceholder {
+  width: 2.25rem;
+  height: 2.25rem;
+  flex-shrink: 0;
+
+  border-radius: 9999px;
+  border: 1px solid #d9cfc7;
+}
+
+.avatar {
+  object-fit: cover;
+}
+
+.avatarPlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #efe9e3;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #6f6a64;
+}
+
+.meta {
+  min-width: 0;
+  text-align: left;
+}
+
+.name {
+  margin: 0;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.subRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+
+  margin-top: 0.2rem;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.starIcon {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.starFilled {
+  color: #f59e0b;
+  fill: #f59e0b;
+}
+
+.starEmpty {
+  color: #d9cfc7;
+  fill: #d9cfc7;
+}
+
+.ratingNumber {
+  margin-left: 0.25rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.dot {
+  color: #d9cfc7;
+  font-size: 0.7rem;
+}
+
+.dateRow {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  font-size: 0.68rem;
+  color: #6f6a64;
+}
+
+.dateIcon {
+  width: 0.65rem;
+  height: 0.65rem;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.badgeVisible {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+
+  padding: 0.2rem 0.6rem;
+
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 9999px;
+
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #065f46;
+
+  white-space: nowrap;
+}
+
+.badgeHidden {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+
+  padding: 0.2rem 0.6rem;
+
+  background: #faf8f5;
+  border: 1px solid #d9cfc7;
+  border-radius: 9999px;
+
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #6f6a64;
+
+  white-space: nowrap;
+}
+
+.badgeIcon {
+  width: 0.65rem;
+  height: 0.65rem;
+}
+
+.hideButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+
+  padding: 0.4rem 0.75rem;
+
+  background: #faf8f5;
+  border: 1px solid #d9cfc7;
+  border-radius: 10px;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #6f6a64;
+
+  cursor: pointer;
+
+  transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+.hideButton:hover {
+  background: #fff1f2;
+  border-color: #fecdd3;
+  color: #9f1239;
+}
+
+.showButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+
+  padding: 0.4rem 0.75rem;
+
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 10px;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #065f46;
+
+  cursor: pointer;
+
+  transition: background-color 150ms ease;
+}
+
+.showButton:hover {
+  background: #d1fae5;
+}
+
+.actionIcon {
+  width: 0.7rem;
+  height: 0.7rem;
+}
+
+.comment {
+  margin: 0;
+  padding-left: 37px;
+  text-align: justify;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: #2f2f2f;
+}
+
+.noComment {
+  color: #6f6a64;
+  font-style: italic;
+}
+
+.imagesRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+
+  padding-left: 3rem;
+}
+
+.imageThumb {
+  position: relative;
+
+  width: 3.5rem;
+  height: 3.5rem;
+
+  border: 1px solid #d9cfc7;
+  border-radius: 12px;
+  overflow: hidden;
+
+  padding: 0;
+  cursor: pointer;
+
+  background: #efe9e3;
+}
+
+.imageThumbImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imageThumbIcon {
+  position: absolute;
+  bottom: 0.2rem;
+  right: 0.2rem;
+
+  width: 0.75rem;
+  height: 0.75rem;
+  color: white;
+
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+}

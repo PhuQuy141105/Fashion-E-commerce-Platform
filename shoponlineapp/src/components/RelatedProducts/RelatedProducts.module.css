@@ -1,0 +1,89 @@
+.section {
+  width: 100%;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(217, 207, 199, 0.8);
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 31px;
+}
+
+.iconWrapper {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.75rem;
+  background: #efe9e3;
+  border: 1px solid #d9cfc7;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #2f2f2f;
+  flex-shrink: 0;
+}
+
+.historyIcon {
+  width: 1rem;
+  height: 1rem;
+  color: #6f6a64;
+}
+
+.sparklesIcon {
+  width: 1rem;
+  height: 1rem;
+  color: #c9b59c;
+}
+
+.title {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  color: #2f2f2f;
+  margin: 0
+}
+
+.subtitle {
+  margin-top: 10px;
+  text-align: justify;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #6f6a64;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .productGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .productGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

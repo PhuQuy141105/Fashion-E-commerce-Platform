@@ -1,0 +1,398 @@
+.page {
+  max-width: 80rem;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  padding: 2rem 1rem 5rem;
+
+  color: #2f2f2f;
+}
+
+@media (min-width: 640px) {
+  .page {
+    padding: 2rem 1.5rem 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page {
+    padding: 2rem 2rem 5rem;
+  }
+}
+
+.headerRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  text-align: justify;
+}
+
+.title {
+  margin: 0;
+
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2f2f2f;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 1.9rem;
+  }
+}
+
+.subtitle {
+  margin-top: 18px;
+  font-size: 0.8rem;
+  color: #6f6a64;
+}
+
+.banner {
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.bannerSuccess {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
+}
+
+.bannerError {
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  color: #9f1239;
+}
+
+.productPicker {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pickerSearchWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.pickerSearchIcon {
+  position: absolute;
+  left: 0.875rem;
+
+  width: 0.9rem;
+  height: 0.9rem;
+  color: #6f6a64;
+  pointer-events: none;
+}
+
+.pickerSearchInput {
+  width: 100%;
+
+  padding: 0.75rem 2.5rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 16px;
+
+  font-size: 0.85rem;
+  color: #2f2f2f;
+
+  outline: none;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+
+  transition: border-color 150ms ease;
+}
+
+.pickerSearchInput:focus {
+  border-color: #c9b59c;
+}
+
+.pickerClearButton {
+  position: absolute;
+  right: 0.75rem;
+
+  display: flex;
+  background: none;
+  border: none;
+
+  color: #6f6a64;
+  cursor: pointer;
+}
+
+.pickerClearButton:hover {
+  color: #2f2f2f;
+}
+
+.pickerClearIcon {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+.pickerResults {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+
+  padding: 0.5rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 16px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  max-height: 16rem;
+  overflow-y: auto;
+}
+
+.pickerResultItem {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+
+  padding: 0.5rem;
+
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+
+  text-align: left;
+  cursor: pointer;
+
+  transition: background-color 150ms ease;
+}
+
+.pickerResultItem:hover {
+  background: #faf8f5;
+}
+
+.pickerResultImage,
+.pickerResultImagePlaceholder {
+  width: 2.25rem;
+  height: 2.25rem;
+  flex-shrink: 0;
+
+  border-radius: 10px;
+  border: 1px solid #d9cfc7;
+}
+
+.pickerResultImage {
+  object-fit: cover;
+}
+
+.pickerResultImagePlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #efe9e3;
+}
+
+.pickerResultImagePlaceholderIcon {
+  width: 1rem;
+  height: 1rem;
+  color: #c9b59c;
+}
+
+.pickerResultName {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #2f2f2f;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.selectedProductBar {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+
+  padding: 0.6rem 0.875rem;
+
+  background: rgba(201, 181, 156, 0.15);
+  border: 1px solid #c9b59c;
+  border-radius: 16px;
+}
+
+.selectedProductImage {
+  width: 2.25rem;
+  height: 2.25rem;
+  flex-shrink: 0;
+
+  border-radius: 10px;
+  border: 1px solid #d9cfc7;
+  object-fit: cover;
+}
+
+.selectedProductName {
+  flex: 1;
+  min-width: 0;
+
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #2f2f2f;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.selectedProductClear {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  padding: 0.35rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 9999px;
+
+  color: #6f6a64;
+  cursor: pointer;
+}
+
+.selectedProductClear:hover {
+  color: #2f2f2f;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 3rem;
+  text-align: center;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 20px;
+}
+
+.emptyIconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 3.5rem;
+  height: 3.5rem;
+
+  background: #faf8f5;
+  border: 1px solid #d9cfc7;
+  border-radius: 18px;
+}
+
+.emptyIcon {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: #c9b59c;
+}
+
+.emptyTitle {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.emptyText {
+  margin: 0;
+  max-width: 24rem;
+  font-size: 0.78rem;
+  color: #6f6a64;
+}
+
+.skeletonList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skeletonCard {
+  height: 8rem;
+
+  background: #efe9e3;
+  border-radius: 20px;
+
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pickerPagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+
+  padding: 0.5rem 0.5rem 0.25rem;
+  margin-top: 0.25rem;
+
+  border-top: 1px solid rgba(217, 207, 199, 0.6);
+}
+
+.pickerPaginationInfo {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #6f6a64;
+}
+
+.pickerPaginationControls {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.pickerPageButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1.75rem;
+  height: 1.75rem;
+
+  background: #faf8f5;
+  border: 1px solid #d9cfc7;
+  border-radius: 8px;
+
+  color: #2f2f2f;
+  cursor: pointer;
+
+  transition: background-color 150ms ease;
+}
+
+.pickerPageButton:hover:not(:disabled) {
+  background: #efe9e3;
+}
+
+.pickerPageButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pickerPageIcon {
+  width: 0.8rem;
+  height: 0.8rem;
+}

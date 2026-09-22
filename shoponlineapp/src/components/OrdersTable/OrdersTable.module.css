@@ -1,0 +1,333 @@
+.stateCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+
+  padding: 3rem;
+  text-align: center;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 20px;
+
+  color: #6f6a64;
+  font-size: 0.8rem;
+}
+
+.loadingIcon {
+  width: 2rem;
+  height: 2rem;
+  color: #c9b59c;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.emptyIconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 3.5rem;
+  height: 3.5rem;
+
+  background: #faf8f5;
+  border: 1px solid #d9cfc7;
+  border-radius: 18px;
+}
+
+.emptyIcon {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: #baa48a;
+}
+
+.emptyTitle {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.emptyText {
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+.resetButton {
+  margin-top: 0.5rem;
+  padding: 0.55rem 1.1rem;
+
+  background: #faf8f5;
+  border: 1px solid #d9cfc7;
+  border-radius: 12px;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #2f2f2f;
+
+  cursor: pointer;
+}
+
+.resetButton:hover {
+  background: #efe9e3;
+}
+
+.tableCard {
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 20px;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+
+  overflow: hidden;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.headRow {
+  background: #faf8f5;
+  border-bottom: 1px solid #d9cfc7;
+  text-align: center;
+}
+
+.th {
+  padding: 0.75rem 1rem;
+
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6f6a64;
+
+  white-space: nowrap;
+}
+
+.thRight {
+  text-align: right;
+}
+
+.row {
+  border-bottom: 1px solid rgba(217, 207, 199, 0.5);
+  transition: background-color 150ms ease;
+  font-size: 13px;
+    text-align: center;
+}
+
+.row:hover {
+  background: #faf8f5;
+}
+
+.cell {
+  padding: 0.875rem 1rem;
+  vertical-align: middle;
+}
+
+.cellRight {
+  text-align: right;
+}
+
+.codeButton {
+  background: none;
+  border: none;
+  font-weight: 500;
+  color: #2f2f2f;
+
+  cursor: pointer;
+}
+
+.codeButton:hover {
+  color: #b8a287;
+  text-decoration: underline;
+}
+
+.recipientName {
+  font-weight: 500;
+  color: #2f2f2f;
+
+  max-width: 12rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.recipientPhone {
+  font-size: 0.68rem;
+  color: #6f6a64;
+}
+
+.dateText {
+  font-size: 0.75rem;
+  color: #6f6a64;
+  white-space: nowrap;
+}
+
+.totalAmount {
+  font-weight: 600;
+  color: #2f2f2f;
+  white-space: nowrap;
+}
+
+.itemCount {
+  font-size: 0.65rem;
+  color: #6f6a64;
+}
+
+.paymentMethodRow {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 500;
+  color: #2f2f2f;
+}
+
+.paymentMethodIconCod {
+  width: 0.85rem;
+  height: 0.85rem;
+  color: #059669;
+}
+
+.paymentMethodIconPayos {
+  width: 0.85rem;
+  height: 0.85rem;
+  color: #4338ca;
+}
+
+.actionsRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.35rem;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.5rem;
+
+  background: #faf8f5;
+  border: 1px solid #d9cfc7;
+  border-radius: 12px;
+
+  color: #6f6a64;
+  cursor: pointer;
+
+  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+}
+
+.actionButton:hover {
+  background: #efe9e3;
+  color: #2f2f2f;
+}
+
+.actionButtonIndigo {
+  background: #e0e7ff;
+  border-color: #c7d2fe;
+  color: #3730a3;
+}
+
+.actionButtonIndigo:hover {
+  background: #c7d2fe;
+}
+
+.actionButtonRose {
+  background: #ffe4e6;
+  border-color: #fecdd3;
+  color: #9f1239;
+}
+
+.actionButtonRose:hover {
+  background: #fecdd3;
+}
+
+.actionIcon {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0.875rem 1.25rem;
+
+  background: rgba(250, 248, 245, 0.6);
+  border-top: 1px solid rgba(217, 207, 199, 0.8);
+}
+
+@media (min-width: 480px) {
+  .pagination {
+    flex-direction: row;
+  }
+}
+
+.paginationInfo {
+  font-size: 0.72rem;
+  color: #6f6a64;
+}
+
+.paginationInfo strong {
+  color: #2f2f2f;
+}
+
+.paginationControls {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.pageLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.pageButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2rem;
+  height: 2rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 10px;
+
+  color: #2f2f2f;
+  cursor: pointer;
+
+  transition: background-color 150ms ease;
+}
+
+.pageButton:hover:not(:disabled) {
+  background: #efe9e3;
+}
+
+.pageButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pageIcon {
+  width: 0.9rem;
+  height: 0.9rem;
+}

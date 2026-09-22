@@ -1,0 +1,181 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.itemsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bar {
+  background: rgba(217, 207, 199, 0.5);
+  border-radius: 6px;
+
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.itemCard {
+  padding: 1.25rem;
+
+  background: white;
+  border: 1px solid rgba(217, 207, 199, 0.7);
+  border-radius: 22px;
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.itemRow {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.image {
+  width: 7rem;
+  height: 7rem;
+  flex-shrink: 0;
+  border-radius: 16px;
+}
+
+.infoLines {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.line1 {
+  height: 0.9rem;
+  width: 5rem;
+  opacity: 0.6;
+}
+
+.line2 {
+  height: 1.25rem;
+  width: 70%;
+}
+
+.tagRow {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tag {
+  height: 1.5rem;
+  width: 5rem;
+  border-radius: 8px;
+  opacity: 0.5;
+}
+
+.actionLines {
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .actionLines {
+    display: flex;
+  }
+}
+
+.price {
+  height: 1.25rem;
+  width: 5rem;
+}
+
+.control {
+  height: 2rem;
+  width: 6rem;
+  border-radius: 10px;
+  opacity: 0.6;
+}
+
+.summaryColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.summaryCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  padding: 1.75rem;
+
+  background: white;
+  border: 1px solid rgba(217, 207, 199, 0.7);
+  border-radius: 26px;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.summaryTitle {
+  height: 1.25rem;
+  width: 9rem;
+}
+
+.summaryNote {
+  height: 3rem;
+  width: 100%;
+  border-radius: 12px;
+  opacity: 0.4;
+}
+
+.summaryRows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  padding-top: 0.5rem;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rowLabel,
+.rowValue {
+  height: 0.9rem;
+  width: 5rem;
+  opacity: 0.5;
+}
+
+.rowLabelLg {
+  height: 1.5rem;
+  width: 7rem;
+}
+
+.rowValueLg {
+  height: 1.5rem;
+  width: 5rem;
+}
+
+.button {
+  height: 3rem;
+  width: 100%;
+  border-radius: 14px;
+  opacity: 0.6;
+}

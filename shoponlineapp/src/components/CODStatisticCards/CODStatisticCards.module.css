@@ -1,0 +1,97 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.875rem;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.skeletonCard {
+  height: 8rem;
+
+  background: #efe9e3;
+  border-radius: 20px;
+
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.card {
+      display: flex;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    gap: 0.875rem;
+    padding: 25px 12px;
+    background: white;
+    border: 1px solid #d9cfc7;
+    border-radius: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    transition: border-color 150ms ease;
+    align-items: center;
+}
+
+.card:hover {
+  border-color: #c9b59c;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.5rem;
+  height: 2.5rem;
+
+  border-radius: 14px;
+  border: 1px solid;
+}
+
+.icon {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.tone_amber { background: #fffbeb; color: #92400e; border-color: #fde68a; }
+.tone_accent { background: rgba(201, 181, 156, 0.2); color: #2f2f2f; border-color: #c9b59c; }
+.tone_emerald { background: #ecfdf5; color: #065f46; border-color: #a7f3d0; }
+.tone_neutral { background: #faf8f5; color: #2f2f2f; border-color: #d9cfc7; }
+
+.label {
+  margin: 0;
+
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6f6a64;
+}
+
+.value {
+  margin: 10px 0;
+
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2f2f2f;
+  letter-spacing: -0.01em;
+}
+
+.subtext {
+  margin: 0.15rem 0 0;
+
+  font-size: 0.68rem;
+  color: rgba(111, 106, 100, 0.85);
+}

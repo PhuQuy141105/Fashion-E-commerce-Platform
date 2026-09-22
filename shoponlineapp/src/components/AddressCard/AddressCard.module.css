@@ -1,0 +1,360 @@
+.card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 1.5rem;
+
+  background: white;
+  border: 1px solid rgba(217, 207, 199, 0.7);
+  border-radius: 22px;
+
+  transition: border-color 250ms ease, box-shadow 250ms ease;
+}
+
+.card:hover {
+  border-color: rgba(201, 181, 156, 0.8);
+  box-shadow: 0 10px 24px rgba(47, 47, 47, 0.05);
+}
+
+.cardDefault {
+  border-color: #c9b59c;
+  box-shadow: 0 0 0 1px rgba(201, 181, 156, 0.4), 0 4px 16px rgba(201, 181, 156, 0.1);
+}
+
+.cardDefault:hover {
+  border-color: #c9b59c;
+  box-shadow: 0 0 0 1px rgba(201, 181, 156, 0.4), 0 4px 16px rgba(201, 181, 156, 0.1);
+}
+
+.cardSelectable {
+  cursor: pointer;
+}
+
+.cardSelected {
+  border-color: #c9b59c;
+  background: rgba(239, 233, 227, 0.4);
+  box-shadow: 0 0 0 2px rgba(201, 181, 156, 0.4);
+}
+
+.cardSelected:hover {
+  border-color: #c9b59c;
+  box-shadow: 0 0 0 2px rgba(201, 181, 156, 0.4);
+}
+
+.selectRadio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 1.25rem;
+  height: 1.25rem;
+
+  background: white;
+  border: 1px solid #d9cfc7;
+  border-radius: 9999px;
+
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.selectRadioActive {
+  background: #c9b59c;
+  border-color: #c9b59c;
+  color: white;
+}
+
+.selectRadioIcon {
+  width: 0.75rem;
+  height: 0.75rem;
+  stroke-width: 3;
+}
+
+.clickToSelectLabel {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #6f6a64;
+}
+
+.topRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+
+  margin-bottom: 0.75rem;
+}
+
+.badgeGroup {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.defaultBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+
+  padding: 0.25rem 0.75rem;
+
+  background: #2f2f2f;
+  border-radius: 9999px;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #f9f8f6;
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.defaultBadgeIcon {
+  width: 0.75rem;
+  height: 0.75rem;
+
+  color: #c9b59c;
+  fill: #c9b59c;
+}
+
+.copyButton {
+  padding: 0.375rem;
+
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+
+  color: #6f6a64;
+  cursor: pointer;
+
+  transition: color 150ms ease, background-color 150ms ease;
+}
+
+.copyButton:hover {
+  color: #2f2f2f;
+  background: rgba(239, 233, 227, 0.6);
+}
+
+.copyIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.copiedLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #047857;
+}
+
+.copiedIcon {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.recipientName {
+      margin: 0 0 0.25rem;
+    font-size: 20px;
+    font-weight: 600;
+    color: #2f2f2f;
+    letter-spacing: -0.01em;
+    text-align: left;
+}
+
+.phoneRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  margin-bottom: 0.75rem;
+
+  font-size: 0.75rem;
+  color: #6f6a64;
+}
+
+.phoneIcon {
+  width: 0.875rem;
+  height: 0.875rem;
+
+  color: #c9b59c;
+}
+
+.addressBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+
+  padding: 0.875rem;
+  margin-bottom: 1.25rem;
+
+  background: #f9f8f6;
+  border: 1px solid rgba(217, 207, 199, 0.4);
+  border-radius: 14px;
+
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #2f2f2f;
+}
+
+.addressContent {
+    text-align: justify
+}
+
+.addressIcon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+
+  color: #c9b59c;
+}
+
+.addressLine {
+  margin: 0 0 0.1rem;
+
+  font-weight: 500;
+  color: #2f2f2f;
+}
+
+.addressSubline {
+  margin: 0;
+
+  font-size: 0.72rem;
+  color: #6f6a64;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  gap: 0.5rem;
+
+  padding-top: 1rem;
+
+  border-top: 1px solid rgba(217, 207, 199, 0.5);
+}
+
+.setDefaultLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+
+  background: none;
+  border: none;
+
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #6f6a64;
+
+  cursor: pointer;
+
+  transition: color 150ms ease;
+}
+
+.setDefaultLink:hover {
+  color: #2f2f2f;
+  text-decoration: underline;
+}
+
+.setDefaultIcon {
+  width: 0.875rem;
+  height: 0.875rem;
+
+  color: #c9b59c;
+}
+
+.primaryLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #065f46;
+}
+
+.primaryIcon {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.actionButtons {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.editButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+
+  padding: 0.375rem 0.75rem;
+
+  background: rgba(239, 233, 227, 0.7);
+  border: 1px solid rgba(217, 207, 199, 0.6);
+  border-radius: 10px;
+
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #2f2f2f;
+
+  cursor: pointer;
+
+  transition: background-color 150ms ease;
+}
+
+.editButton:hover {
+  background: #efe9e3;
+}
+
+.editIcon {
+  width: 0.875rem;
+  height: 0.875rem;
+
+  color: #6f6a64;
+}
+
+.deleteButton {
+  padding: 0.375rem;
+
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 10px;
+
+  color: #6f6a64;
+  cursor: pointer;
+
+  transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease;
+}
+
+.deleteButton:hover {
+  color: #e11d48;
+  background: #fff1f2;
+  border-color: #fecdd3;
+}
+
+.deleteButtonDisabled {
+  color: #d9cfc7;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.deleteButtonDisabled:hover {
+  color: #d9cfc7;
+  background: transparent;
+  border-color: transparent;
+}
+
+.deleteIcon {
+  width: 1rem;
+  height: 1rem;
+}
